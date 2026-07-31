@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { User, Calendar } from "lucide-react";
+import { User, Calendar, ArrowUpRight } from "lucide-react";
 
 export default function BlogSection() {
   const posts = [
@@ -34,65 +34,97 @@ export default function BlogSection() {
   ];
 
   return (
-    <section id="blog" className="py-20 lg:py-28 bg-[#002365] relative">
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-            Our Blog
+    <section id="blog" className="py-16 sm:py-20 lg:py-24 bg-[#002365] relative text-white">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 space-y-4">
+          {/* Badge: Fixed SVG viewBox to prevent star clipping */}
+          <div className="inline-flex items-center justify-center gap-2.5 px-5 h-[50.39px] rounded-full bg-[#002365] border border-[#205b9e]/80 shadow-[0_0_15px_rgba(32,91,158,0.2)] shrink-0">
+            <svg
+              width="16"
+              height="16"
+              viewBox="-2 -2 28 28"
+              fill="#20c9d2"
+              xmlns="http://www.w3.org/2000/svg"
+              className="shrink-0 overflow-visible"
+            >
+              <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+            </svg>
+            <span className="font-roboto font-normal text-white text-[14px] tracking-normal">
+              Our Blog
+            </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+
+          <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-[42px] text-white leading-tight tracking-tight">
             Our Lates Blog
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base">
+
+          <p className="font-roboto text-slate-200 text-sm sm:text-base leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
           </p>
         </div>
 
-        {/* Blog Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Blog Cards Grid with Ocean Hover Effects */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {posts.map((post, idx) => (
             <article
               key={idx}
-              className="bg-[#001947] rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition-all duration-300 group flex flex-col justify-between shadow-xl"
+              className="bg-[#00173e] rounded-[22px] border border-[#205b9e]/40 p-3.5 sm:p-4 transition-all duration-500 ease-out hover:-translate-y-2.5 hover:border-[#00d2eb]/70 hover:shadow-[0_20px_40px_rgba(0,35,101,0.7),0_0_30px_rgba(0,210,235,0.25)] group flex flex-col justify-between cursor-pointer relative overflow-hidden"
             >
-              {/* Image with Category Badge */}
-              <div className="relative h-56 w-full overflow-hidden">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="px-3 py-1 rounded-md bg-cyan-600/90 text-white text-[11px] font-semibold tracking-wider">
-                    {post.category}
-                  </span>
-                </div>
-              </div>
+              <div className="space-y-4 relative z-10">
+                {/* Image Container with Ocean Wave Shimmer Sweep */}
+                <div className="relative aspect-[16/10] w-full rounded-[16px] overflow-hidden bg-slate-900">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+                  />
 
-              {/* Card Meta & Details */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-4 text-slate-400 text-xs font-medium">
-                    <span className="flex items-center gap-1.5">
-                      <User className="w-3.5 h-3.5 text-cyan-400" />
-                      {post.author}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-cyan-400" />
-                      {post.date}
+                  {/* Ocean Water Caustic Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#00173e]/70 via-transparent to-transparent opacity-40 group-hover:opacity-80 transition-opacity duration-500" />
+
+                  {/* Oceanic Light Sheen Sweep (Sunlight filtering through water) */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-300/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+
+                  {/* Category Pill */}
+                  <div className="absolute top-3.5 left-3.5 z-10">
+                    <span className="px-3 py-1 rounded-full bg-[#002365]/90 border border-[#20c9d2]/40 text-[#00d2eb] text-[11px] font-medium tracking-wide group-hover:bg-[#0055ff] group-hover:text-white group-hover:border-white/50 transition-all duration-300 shadow-md">
+                      {post.category}
                     </span>
                   </div>
+                </div>
 
-                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug">
-                    <Link href="#">{post.title}</Link>
-                  </h3>
+                {/* Author & Date Metadata */}
+                <div className="flex items-center gap-5 text-slate-300 text-xs font-normal pt-1">
+                  <span className="flex items-center gap-2">
+                    <User className="w-4 h-4 text-cyan-400" />
+                    {post.author}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-cyan-400" />
+                    {post.date}
+                  </span>
+                </div>
 
-                  <p className="text-slate-300 text-xs leading-relaxed">
-                    {post.excerpt}
-                  </p>
+                {/* Blog Title */}
+                <h3 className="font-poppins font-bold text-lg sm:text-xl text-[#00d2eb] group-hover:text-white transition-colors duration-300 leading-snug">
+                  <Link href="#">{post.title}</Link>
+                </h3>
+
+                {/* Excerpt */}
+                <p className="font-roboto text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  {post.excerpt}
+                </p>
+
+                {/* Oceanic Action Row */}
+                <div className="pt-3 flex items-center justify-between border-t border-[#205b9e]/30 mt-2">
+                  <span className="text-xs font-medium text-slate-300 group-hover:text-cyan-300 transition-colors duration-300">
+                    Read Article
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-[#002365] border border-[#205b9e]/60 flex items-center justify-center text-cyan-400 group-hover:bg-[#00c9d2] group-hover:text-[#002365] group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(0,201,210,0.7)] transition-all duration-300">
+                    <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
+                  </div>
                 </div>
               </div>
             </article>

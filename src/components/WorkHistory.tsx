@@ -8,18 +8,16 @@ export default function WorkHistory() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#002365] relative overflow-hidden">
+    <section className="py-12 sm:py-16 bg-[#002365] relative overflow-hidden">
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#001947] border border-white/10 rounded-2xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full filter blur-3xl pointer-events-none" />
-
+        <div className="bg-[#001947] border border-[#205b9e]/30 rounded-[24px] p-8 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Info */}
             <div className="lg:col-span-7 space-y-3">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-                Ocean 9&apos;s work history
+              <h2 className="font-poppins text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
+                Ocean 9’s work history
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p className="font-roboto text-slate-200 text-sm sm:text-base leading-relaxed max-w-xl">
                 Includes projects for Reliance Industries, the Indian Navy, Adani, Airtel, Tata
                 Communications and other marine and infrastructure clients.
               </p>
@@ -30,7 +28,7 @@ export default function WorkHistory() {
               {clientsList.map((client, idx) => (
                 <div
                   key={idx}
-                  className="px-5 py-2.5 rounded-full bg-[#002d75] hover:bg-[#00388a] border border-white/10 text-white font-medium text-xs tracking-wider transition-all duration-300 shadow-md transform hover:scale-105"
+                  className="px-5 py-2.5 rounded-full bg-[#002d75] hover:bg-[#00388a] border border-[#205b9e]/50 text-white font-medium text-xs sm:text-sm tracking-wider transition-all duration-300 shadow-md transform hover:scale-105"
                 >
                   {client}
                 </div>

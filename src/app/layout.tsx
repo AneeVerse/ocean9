@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Poppins, Roboto } from "next/font/google";
+import { DM_Sans, Poppins, Roboto, Oswald } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -18,6 +18,12 @@ const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -40,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${poppins.variable} ${roboto.variable} font-sans scroll-smooth`}>
+    <html lang="en" className={`${dmSans.variable} ${poppins.variable} ${roboto.variable} ${oswald.variable} font-sans scroll-smooth`}>
       <body className="bg-[#030A16] text-white antialiased font-sans overflow-x-hidden selection:bg-cyan-500 selection:text-white">
         {children}
       </body>

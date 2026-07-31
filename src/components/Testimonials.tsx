@@ -1,54 +1,53 @@
 import Image from "next/image";
-import { Quote } from "lucide-react";
 
 export default function Testimonials() {
   return (
-    <section className="py-20 lg:py-28 bg-[#002365] relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Side: Diver Image */}
-          <div className="lg:col-span-5">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-[4/3] sm:aspect-[4/3]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          {/* Left Side: Diver Image - Exact Figma 630x550 Sizing */}
+          <div className="lg:col-span-6 flex flex-col justify-stretch">
+            <div className="relative rounded-[24px] overflow-hidden shadow-lg border border-slate-200/60 w-full h-full min-h-[360px] sm:min-h-[400px] lg:min-h-[440px] aspect-[630/550] lg:aspect-auto bg-slate-900">
               <Image
                 src="/assets/home-what-our-clients-are-saying.png"
                 alt="Client Testimonial Diver"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
           </div>
 
-          {/* Right Side: Copy & Testimonial Box */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+          {/* Right Side: Header Copy & Testimonial Card */}
+          <div className="lg:col-span-6 flex flex-col justify-between h-full space-y-6 lg:space-y-0">
+            <div className="space-y-2.5">
+              <span className="font-dm-sans font-bold text-xs sm:text-sm text-[#0055ff] tracking-wider uppercase block">
                 TESTIMONIAL
-              </div>
+              </span>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                What Our Clients Are Saying
+              <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-[42px] text-[#002365] leading-tight tracking-tight">
+                What Our Clients <br className="hidden sm:inline" />
+                Are Saying
               </h2>
 
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              <p className="font-roboto text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </p>
             </div>
 
-            {/* Testimonial Quote Card */}
-            <div className="relative bg-[#001947] border border-white/10 rounded-2xl p-8 shadow-2xl overflow-hidden mt-6">
-              <p className="text-slate-200 text-sm sm:text-base leading-relaxed relative z-10 italic">
+            {/* Testimonial Quote Card in Ocean 9 Navy (#002365) */}
+            <div className="bg-[#002365] border border-[#205b9e]/30 rounded-[24px] p-6 sm:p-7 lg:p-8 shadow-xl relative overflow-hidden mt-4 lg:mt-0">
+              <p className="font-roboto text-slate-200 text-xs sm:text-sm leading-relaxed mb-6">
                 &ldquo;The diving experience with this company was outstanding! The instructors
                 were highly professional and made sure everyone felt safe and comfortable. The
-                equipment was top notch, and the underwater scenery was absolutely breathtaking. I
+                equipment was top-notch, and the underwater scenery was absolutely breathtaking. I
                 highly recommend them for an unforgettable diving adventure!&rdquo;
               </p>
 
-              {/* Author Row & Decorative Quote */}
-              <div className="mt-8 flex items-center justify-between relative z-10 pt-4 border-t border-white/10">
+              {/* Author Info & Outline Quote Mark Icon */}
+              <div className="flex items-center justify-between pt-1">
                 <div className="flex items-center gap-3.5">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-cyan-400">
+                  <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-white/20">
                     <Image
                       src="/assets/home-drew-fieg-client.jpg"
                       alt="Drew Feig"
@@ -57,14 +56,25 @@ export default function Testimonials() {
                     />
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-white">Drew Feig</h4>
-                    <p className="text-xs text-slate-400 font-medium">Client</p>
+                    <h4 className="font-poppins font-bold text-base text-white">Drew Feig</h4>
+                    <p className="font-roboto text-xs text-slate-400 font-medium">Client</p>
                   </div>
                 </div>
 
-                {/* Decorative Quotation Mark Graphic */}
-                <div className="opacity-30 text-cyan-400 font-serif text-6xl font-bold select-none">
-                  99
+                {/* Outline Double Quote Mark Icon */}
+                <div className="shrink-0">
+                  <svg
+                    className="w-9 h-9 sm:w-10 sm:h-10 text-[#0055ff]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h4c0 2.5-1 4-3 5.5" />
+                    <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h4c0 2.5-1 4-3 5.5" />
+                  </svg>
                 </div>
               </div>
             </div>

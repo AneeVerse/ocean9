@@ -71,14 +71,14 @@ export default function ServicesSection() {
       {/* Horizontal Scrollable Cards Track */}
       <div className="w-full overflow-x-auto scrollbar-none pb-8 pt-2">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-6 w-max pr-12">
+          <div className="flex gap-4 sm:gap-4.5 lg:gap-5 w-max pr-12">
           {services.map((service, index) => (
             <div
               key={index}
-              className="w-[280px] sm:w-[310px] lg:w-[335px] rounded-[24px] overflow-hidden shadow-2xl flex flex-col shrink-0 snap-start transition-transform duration-300 hover:-translate-y-1.5 group"
+              className="w-[235px] sm:w-[250px] lg:w-[260px] xl:w-[265px] h-auto rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-xl flex flex-col shrink-0 snap-start transition-transform duration-300 hover:-translate-y-1.5 group"
             >
               {/* Card Top Image */}
-              <div className="relative h-[240px] sm:h-[265px] w-full overflow-hidden bg-slate-900 rounded-t-[24px]">
+              <div className="relative h-[175px] sm:h-[185px] lg:h-[195px] w-full overflow-hidden bg-slate-900 rounded-t-[20px] sm:rounded-t-[24px] shrink-0">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -87,13 +87,13 @@ export default function ServicesSection() {
                 />
               </div>
 
-              {/* Card Bottom White Content Box */}
-              <div className="bg-white p-6 sm:p-7 rounded-b-[24px] text-center flex-1 flex flex-col justify-between space-y-4">
+              {/* Card Bottom White Content Box - Height according to content */}
+              <div className="bg-white p-4 sm:p-5 rounded-b-[20px] sm:rounded-b-[24px] text-center flex-1 flex flex-col justify-between space-y-3">
                 <div>
-                  <h3 className="font-poppins font-bold text-xl sm:text-[22px] text-[#081935] mb-2.5 leading-snug">
+                  <h3 className="font-poppins font-bold text-base sm:text-lg text-[#081935] mb-2 leading-snug">
                     {service.title}
                   </h3>
-                  <p className="font-roboto font-normal text-slate-600 text-xs sm:text-[13px] leading-relaxed max-w-[260px] mx-auto">
+                  <p className="font-roboto font-normal text-slate-600 text-xs sm:text-[13px] leading-relaxed">
                     {service.description}
                   </p>
                 </div>

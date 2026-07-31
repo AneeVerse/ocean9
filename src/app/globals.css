@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
+  --color-ocean-dark: #030a16;
+  --color-ocean-card: #081730;
+  --color-ocean-card-hover: #0d2142;
+  --color-ocean-accent: #0077ff;
+  --color-ocean-cyan: #00d2ff;
+  --color-ocean-border: rgba(255, 255, 255, 0.1);
+}
+
+:root {
+  --background: #030a16;
+  --foreground: #ffffff;
+}
+
+body {
+  background-color: #030a16;
+  color: #ffffff;
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030a16;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f274a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0077ff;
+}
+
+/* Auto Infinite Marquee Animation for Logo Strip */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}

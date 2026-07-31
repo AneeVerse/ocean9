@@ -1,0 +1,115 @@
+import Image from "next/image";
+
+export default function ClientStrip() {
+  const clients = [
+    {
+      name: "Sea Geo Surveys",
+      src: "/assets/home-sea-geo-logo.png",
+      alt: "Sea Geo Surveys Pvt. Ltd. Logo",
+      heightClass: "h-9 sm:h-11 lg:h-13",
+    },
+    {
+      name: "Paramount Wires & Cables",
+      src: "/assets/home-paramount-logo.png",
+      alt: "Paramount Wires & Cables Logo",
+      heightClass: "h-9 sm:h-11 lg:h-13",
+    },
+    {
+      name: "UD Group",
+      src: "/assets/home-UD-group-logo.png",
+      alt: "UD Group Logo",
+      heightClass: "h-10 sm:h-12 lg:h-14",
+    },
+    {
+      name: "Adani Ports and Logistics",
+      src: "/assets/home-adani-ports-logistics-logo.png",
+      alt: "Adani Ports and Logistics Logo",
+      heightClass: "h-11 sm:h-14 lg:h-16",
+    },
+    {
+      name: "Gulf Dredging",
+      src: "/assets/home-gulf-logo.png",
+      alt: "Gulf Logo",
+      heightClass: "h-5 sm:h-7 lg:h-8",
+    },
+  ];
+
+  // Repeat logo set for dense continuous track
+  const trackClients = [...clients, ...clients, ...clients];
+
+  return (
+    <div className="relative bg-[#020917] z-20 overflow-hidden">
+      {/* Top Wave: Downward Sweeping Curve (Top edge sags down in center) */}
+      <div className="w-full overflow-hidden leading-none bg-[#020917] -mb-px">
+        <svg
+          viewBox="0 0 1440 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="relative block w-full h-[55px] sm:h-[85px] lg:h-[110px]"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 5 Q 720 85 1440 5 L 1440 101 L 0 101 Z"
+            fill="#FFFFFF"
+          />
+        </svg>
+      </div>
+
+      {/* Main White Banner with Auto Infinite Marquee Scrolling */}
+      <section className="bg-white py-1 sm:py-2 lg:py-2 overflow-hidden relative">
+        <div className="w-full flex overflow-hidden">
+          {/* Twin Track 1 */}
+          <div className="animate-marquee flex items-center shrink-0">
+            {trackClients.map((client, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center shrink-0 px-6 sm:px-8 lg:px-10"
+              >
+                <img
+                  src={client.src}
+                  alt={client.alt}
+                  className={`${client.heightClass} w-auto object-contain transition-transform duration-300`}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Twin Track 2 (Identical Duplicate for Seamless 60fps Loop) */}
+          <div
+            className="animate-marquee flex items-center shrink-0"
+            aria-hidden="true"
+          >
+            {trackClients.map((client, index) => (
+              <div
+                key={`dup-${index}`}
+                className="flex items-center justify-center shrink-0 px-6 sm:px-8 lg:px-10"
+              >
+                <img
+                  src={client.src}
+                  alt={client.alt}
+                  className={`${client.heightClass} w-auto object-contain transition-transform duration-300`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom Wave: Upward Sweeping Curve (Bottom edge rises up in center) */}
+      <div className="w-full overflow-hidden leading-none bg-[#030A16] -mt-px">
+        <svg
+          viewBox="0 0 1440 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="relative block w-full h-[55px] sm:h-[85px] lg:h-[110px]"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 0 L 1440 0 L 1440 95 Q 720 15 0 95 Z"
+            fill="#FFFFFF"
+          />
+        </svg>
+      </div>
+    </div>
+  );
+}

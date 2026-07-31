@@ -23,8 +23,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-[#030A16] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 lg:py-28 bg-[#002365] relative">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left Column: Form Container (Light Soft Blue Card) */}
           <div className="lg:col-span-7 bg-[#E8F2FD] rounded-3xl p-8 sm:p-12 text-slate-900 shadow-2xl flex flex-col justify-between">
@@ -126,7 +126,7 @@ export default function ContactSection() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#030A16] via-[#030A16]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#002365] via-[#002365]/40 to-transparent" />
 
             <div className="absolute bottom-8 left-8 right-8 space-y-3">
               <p className="text-white text-base sm:text-lg font-medium leading-relaxed italic">

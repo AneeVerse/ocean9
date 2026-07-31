@@ -4,17 +4,15 @@ import { ArrowRight } from "lucide-react";
 
 export default function ReadyToDive() {
   return (
-    <section className="relative py-28 lg:py-36 overflow-hidden bg-[#020A17] text-center flex items-center justify-center">
-      {/* Background Image & Deep Ocean Gradient Overlay */}
+    <section className="relative py-28 lg:py-36 overflow-hidden bg-[#002365] text-center flex items-center justify-center">
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/ready_to_dive_bg.png"
           alt="Underwater Deep Sea Background"
           fill
-          className="object-cover object-center opacity-85"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#030A16] via-transparent to-[#030A16]" />
-        <div className="absolute inset-0 bg-[#020A17]/30" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">

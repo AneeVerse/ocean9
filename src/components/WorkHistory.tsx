@@ -8,9 +8,9 @@ export default function WorkHistory() {
   ];
 
   return (
-    <section className="py-12 bg-[#020814]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#061833] border border-white/10 rounded-2xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-[#002365] relative overflow-hidden">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#001947] border border-white/10 rounded-2xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full filter blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -30,7 +30,7 @@ export default function WorkHistory() {
               {clientsList.map((client, idx) => (
                 <div
                   key={idx}
-                  className="px-5 py-2.5 rounded-full bg-[#0A2346] hover:bg-[#0E2E5C] border border-white/10 text-white font-medium text-xs tracking-wider transition-all duration-300 shadow-md transform hover:scale-105"
+                  className="px-5 py-2.5 rounded-full bg-[#002d75] hover:bg-[#00388a] border border-white/10 text-white font-medium text-xs tracking-wider transition-all duration-300 shadow-md transform hover:scale-105"
                 >
                   {client}
                 </div>

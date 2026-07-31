@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function ServicesSection() {
-  const services = [
+  const baseServices = [
     {
       title: "Air Diving",
       description:
@@ -19,7 +19,7 @@ export default function ServicesSection() {
     {
       title: "Saturation Diving",
       description:
-        "Long duration diving support for deep water offshore and subsea projects.",
+        "Long-duration diving support for deep-water offshore and subsea projects.",
       image: "/assets/home-saturation-diving-card.png",
     },
     {
@@ -36,58 +36,64 @@ export default function ServicesSection() {
     },
   ];
 
-  return (
-    <section id="services" className="py-20 lg:py-28 bg-[#020917] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
-          <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-              Services We Provide
-            </h2>
-            <p className="text-slate-300 text-base sm:text-lg mt-3">
-              Complete support for underwater, offshore and marine projects.
-            </p>
-          </div>
+  // Duplicate set to enable smooth horizontal scrolling
+  const services = [...baseServices, ...baseServices];
 
-          <div>
+  return (
+    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-[#002365] relative overflow-hidden">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        {/* Section Header */}
+        <div className="relative text-center">
+          <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-[44px] text-white tracking-tight">
+            Services We Provide
+          </h2>
+          <p className="font-roboto font-normal text-slate-200 text-sm sm:text-base lg:text-[17px] mt-2 max-w-2xl mx-auto">
+            Complete support for underwater, offshore and marine projects.
+          </p>
+
+          {/* Top Right "View All Services" Button: Figma exact spec */}
+          <div className="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 mt-6 md:mt-0 flex justify-center md:justify-end">
             <Link
               href="#services"
-              className="inline-flex items-center gap-2.5 bg-[#061833] hover:bg-[#0A264F] border border-white/15 text-white font-medium text-xs tracking-wider uppercase px-5 py-3 rounded-full transition-all"
+              className="inline-flex items-center gap-4 bg-[#002365] border border-white/40 hover:border-white text-white pl-6 pr-1.5 py-1.5 rounded-full transition-all duration-300 shadow-md group cursor-pointer"
             >
-              <span>View All Services</span>
-              <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
-                <ArrowUpRight className="w-3.5 h-3.5 text-white" />
+              <span className="font-dm-sans font-medium text-[15px] leading-[24px] tracking-normal text-white whitespace-nowrap">
+                View All Services
+              </span>
+              <div className="w-[38px] h-[38px] rounded-full bg-white flex items-center justify-center text-[#002365] group-hover:scale-105 transition-transform shrink-0">
+                <ArrowUpRight className="w-5 h-5 stroke-[2] text-[#002365]" />
               </div>
             </Link>
           </div>
         </div>
+      </div>
 
-        {/* Services Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      {/* Horizontal Scrollable Cards Track */}
+      <div className="w-full overflow-x-auto scrollbar-none pb-8 pt-2">
+        <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex gap-6 w-max pr-12">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-[#061833] rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-lg"
+              className="w-[280px] sm:w-[310px] lg:w-[335px] rounded-[24px] overflow-hidden shadow-2xl flex flex-col shrink-0 snap-start transition-transform duration-300 hover:-translate-y-1.5 group"
             >
-              {/* Card Image */}
-              <div className="relative h-48 w-full overflow-hidden bg-slate-900">
+              {/* Card Top Image */}
+              <div className="relative h-[240px] sm:h-[265px] w-full overflow-hidden bg-slate-900 rounded-t-[24px]">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#061833] via-transparent to-transparent" />
               </div>
 
-              {/* Card Content */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+              {/* Card Bottom White Content Box */}
+              <div className="bg-white p-6 sm:p-7 rounded-b-[24px] text-center flex-1 flex flex-col justify-between space-y-4">
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="font-poppins font-bold text-xl sm:text-[22px] text-[#081935] mb-2.5 leading-snug">
                     {service.title}
                   </h3>
-                  <p className="text-slate-300 text-xs leading-relaxed">
+                  <p className="font-roboto font-normal text-slate-600 text-xs sm:text-[13px] leading-relaxed max-w-[260px] mx-auto">
                     {service.description}
                   </p>
                 </div>
@@ -95,10 +101,9 @@ export default function ServicesSection() {
                 <div className="pt-2">
                   <Link
                     href="#contact"
-                    className="inline-flex items-center text-xs font-semibold text-cyan-400 hover:text-cyan-300 gap-1 transition-colors"
+                    className="inline-block font-dm-sans font-bold text-xs sm:text-sm text-[#0055ff] hover:text-[#0038b8] transition-colors"
                   >
-                    <span>Read More</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -106,6 +111,7 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   );
 }

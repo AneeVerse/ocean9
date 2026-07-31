@@ -27,8 +27,8 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#030A16] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="why-choose-us" className="py-20 lg:py-28 bg-[#002365] relative">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Image & Header Copy */}
           <div className="lg:col-span-5 space-y-6">
@@ -65,9 +65,9 @@ export default function WhyChooseUs() {
               return (
                 <div
                   key={idx}
-                  className="bg-[#07172F] hover:bg-[#0B2142] border border-white/10 rounded-2xl p-6 transition-all duration-300 flex items-start gap-5 shadow-lg group"
+                  className="bg-[#001947] hover:bg-[#002d75] border border-white/10 rounded-2xl p-6 transition-all duration-300 flex items-start gap-5 shadow-lg group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#0F3261] flex items-center justify-center text-cyan-400 shrink-0 font-bold text-lg group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-[#00388a] flex items-center justify-center text-cyan-400 shrink-0 font-bold text-lg group-hover:scale-110 transition-transform">
                     {feature.number}
                   </div>
                   <div className="space-y-1.5">

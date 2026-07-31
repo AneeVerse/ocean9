@@ -38,25 +38,25 @@ export default function ClientStrip() {
   const trackClients = [...clients, ...clients, ...clients];
 
   return (
-    <div className="relative bg-[#020917] z-20 overflow-hidden">
-      {/* Top Wave: Downward Sweeping Curve (Top edge sags down in center) */}
+    <div className="relative bg-[#002365] z-20 overflow-hidden">
+      {/* Top Wave: Sweeping Curve */}
       <div className="w-full overflow-hidden leading-none bg-[#020917] -mb-px">
         <svg
-          viewBox="0 0 1440 100"
+          viewBox="0 0 1440 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="relative block w-full h-[55px] sm:h-[85px] lg:h-[110px]"
+          className="relative block w-full h-[36px] sm:h-[52px] lg:h-[68px]"
           preserveAspectRatio="none"
         >
           <path
-            d="M0 5 Q 720 85 1440 5 L 1440 101 L 0 101 Z"
+            d="M0 0 Q 720 54 1440 0 L 1440 81 L 0 81 Z"
             fill="#FFFFFF"
           />
         </svg>
       </div>
 
       {/* Main White Banner with Auto Infinite Marquee Scrolling */}
-      <section className="bg-white py-1 sm:py-2 lg:py-2 overflow-hidden relative">
+      <section className="bg-white py-0.5 sm:py-1 overflow-hidden relative">
         <div className="w-full flex overflow-hidden">
           {/* Twin Track 1 */}
           <div className="animate-marquee flex items-center shrink-0">
@@ -95,17 +95,17 @@ export default function ClientStrip() {
         </div>
       </section>
 
-      {/* Bottom Wave: Upward Sweeping Curve (Bottom edge rises up in center) */}
-      <div className="w-full overflow-hidden leading-none bg-[#030A16] -mt-px">
+      {/* Bottom Wave: Sweeping Curve */}
+      <div className="w-full overflow-hidden leading-none bg-[#002365] -mt-px">
         <svg
-          viewBox="0 0 1440 100"
+          viewBox="0 0 1440 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="relative block w-full h-[55px] sm:h-[85px] lg:h-[110px]"
+          className="relative block w-full h-[36px] sm:h-[52px] lg:h-[68px]"
           preserveAspectRatio="none"
         >
           <path
-            d="M0 0 L 1440 0 L 1440 95 Q 720 15 0 95 Z"
+            d="M0 0 L 1440 0 L 1440 81 Q 720 26 0 81 Z"
             fill="#FFFFFF"
           />
         </svg>

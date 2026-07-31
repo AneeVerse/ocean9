@@ -24,14 +24,14 @@ const SHOW_UNDER_CONSTRUCTION_BY_DEFAULT = true;
 function HomeContent() {
   const searchParams = useSearchParams();
   const isPreview = searchParams.get("preview") === "true";
-  const [forcePreview, setForcePreview] = useState(false);
 
-  if (SHOW_UNDER_CONSTRUCTION_BY_DEFAULT && !isPreview && !forcePreview) {
+  // Show Under Construction by default. Pass ?preview=true in URL to view full site.
+  if (!isPreview) {
     return <UnderConstruction />;
   }
 
   return (
-    <main className="min-h-screen bg-[#030A16] text-white flex flex-col font-sans">
+    <main className="min-h-screen bg-[#002365] text-white flex flex-col font-sans">
       <Navbar />
       <Hero />
       <ClientStrip />
@@ -52,7 +52,7 @@ function HomeContent() {
 
 export default function Home() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-[#020917]" />}>
+    <Suspense fallback={<div className="min-h-screen bg-[#002365]" />}>
       <HomeContent />
     </Suspense>
   );

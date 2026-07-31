@@ -34,8 +34,8 @@ export default function BlogSection() {
   ];
 
   return (
-    <section id="blog" className="py-20 lg:py-28 bg-[#030A16] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="blog" className="py-20 lg:py-28 bg-[#002365] relative">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
@@ -55,7 +55,7 @@ export default function BlogSection() {
           {posts.map((post, idx) => (
             <article
               key={idx}
-              className="bg-[#061833] rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition-all duration-300 group flex flex-col justify-between shadow-xl"
+              className="bg-[#001947] rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition-all duration-300 group flex flex-col justify-between shadow-xl"
             >
               {/* Image with Category Badge */}
               <div className="relative h-56 w-full overflow-hidden">

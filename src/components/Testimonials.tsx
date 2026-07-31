@@ -3,8 +3,8 @@ import { Quote } from "lucide-react";
 
 export default function Testimonials() {
   return (
-    <section className="py-20 lg:py-28 bg-[#020814] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 lg:py-28 bg-[#002365] relative overflow-hidden">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Side: Diver Image */}
           <div className="lg:col-span-5">
@@ -37,7 +37,7 @@ export default function Testimonials() {
             </div>
 
             {/* Testimonial Quote Card */}
-            <div className="relative bg-[#061833] border border-white/10 rounded-2xl p-8 shadow-2xl overflow-hidden mt-6">
+            <div className="relative bg-[#001947] border border-white/10 rounded-2xl p-8 shadow-2xl overflow-hidden mt-6">
               <p className="text-slate-200 text-sm sm:text-base leading-relaxed relative z-10 italic">
                 &ldquo;The diving experience with this company was outstanding! The instructors
                 were highly professional and made sure everyone felt safe and comfortable. The

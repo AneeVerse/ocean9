@@ -8,19 +8,19 @@ export default function Hero() {
       {/* Crisp Full Viewport Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/home-hero-bg.png"
+          src="/assets/home-hero-bg2.png"
           alt="Ocean 9 Offshore Diver & Marine Operations"
           fill
           priority
           className="object-cover object-center lg:object-right"
         />
 
-        {/* Dark Gradient Overlay strictly on the left side behind text */}
-        <div className="absolute inset-y-0 left-0 w-full sm:w-3/5 lg:w-[58%] bg-gradient-to-r from-[#020917] via-[#020917]/95 to-transparent z-0" />
+        {/* Balanced bottom gradient overlay */}
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#020917]/90 via-[#020917]/50 to-transparent z-0 pointer-events-none" />
       </div>
 
       {/* Main Hero Content - Vertically centered inside 100vh single fold */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center pt-24 sm:pt-28 pb-12">
+      <div className="relative z-10 max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center pt-24 sm:pt-28 pb-12">
         <div className="max-w-[950px]">
           {/* Badge matching exact Figma specs (h-34px, px-12px, py-2px, rounded-50px, #003D82) */}
           <div className="inline-flex items-center justify-center h-[34px] px-[12px] py-[2px] rounded-[50px] bg-[#003D82] text-white text-xs font-bold tracking-wider uppercase mb-5 shadow-md">

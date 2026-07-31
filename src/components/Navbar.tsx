@@ -10,15 +10,15 @@ export default function Navbar() {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
-        {/* Ocean 9 Logo: Exact Figma dimensions 224px x 68px */}
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 pt-3 sm:pt-4 flex items-center justify-between">
+        {/* Ocean 9 Logo */}
         <Link href="/" className="flex items-center group">
-          <div className="relative w-[224px] h-[68px] overflow-visible flex items-center">
+          <div className="relative w-[180px] sm:w-[200px] h-[55px] sm:h-[60px] flex items-center mt-2">
             <Image
-              src="/assets/ocean9-logo-nav.png"
+              src="/assets/ocean9-logo.png"
               alt="Ocean 9 Logo"
               fill
-              className="object-contain object-left scale-[1.4] origin-left"
+              className="object-contain object-left scale-100 origin-left"
               priority
             />
           </div>
@@ -86,7 +86,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#030B19]/95 backdrop-blur-xl border-b border-white/10 px-6 pt-4 pb-6 space-y-4">
+        <div className="md:hidden bg-[#002365]/95 backdrop-blur-xl border-b border-white/10 px-6 pt-4 pb-6 space-y-4">
           <Link
             href="#"
             onClick={() => setMobileMenuOpen(false)}

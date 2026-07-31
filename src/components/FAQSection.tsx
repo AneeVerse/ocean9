@@ -30,8 +30,8 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-[#020814] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-20 lg:py-28 bg-[#002365] relative overflow-hidden">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Image with Call Us Now Box */}
           <div className="lg:col-span-5 relative">
@@ -42,10 +42,10 @@ export default function FAQSection() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#020814]/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#002365]/80 via-transparent to-transparent" />
 
               {/* Call Us Now Overlay Badge */}
-              <div className="absolute bottom-6 left-6 right-6 bg-[#061833]/90 backdrop-blur-md p-4 rounded-xl border border-white/15 shadow-2xl flex items-center gap-4">
+              <div className="absolute bottom-6 left-6 right-6 bg-[#001947]/90 backdrop-blur-md p-4 rounded-xl border border-white/15 shadow-2xl flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center text-white shrink-0 shadow-lg animate-bounce">
                   <PhoneCall className="w-6 h-6" />
                 </div>
@@ -82,7 +82,7 @@ export default function FAQSection() {
                 return (
                   <div
                     key={idx}
-                    className="bg-[#061833] border border-white/10 rounded-xl overflow-hidden transition-all duration-300 shadow-md"
+                    className="bg-[#001947] border border-white/10 rounded-xl overflow-hidden transition-all duration-300 shadow-md"
                   >
                     <button
                       onClick={() => toggleFAQ(idx)}
@@ -100,7 +100,7 @@ export default function FAQSection() {
                     </button>
 
                     {isOpen && (
-                      <div className="px-5 pb-5 pt-1 text-slate-300 text-sm leading-relaxed border-t border-white/5 bg-[#041226]">
+                      <div className="px-5 pb-5 pt-1 text-slate-300 text-sm leading-relaxed border-t border-white/5 bg-[#001438]">
                         {faq.answer}
                       </div>
                     )}

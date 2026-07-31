@@ -4,8 +4,8 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function ProjectExperience() {
   return (
-    <section id="projects" className="py-20 lg:py-28 bg-[#030A16] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 lg:py-28 bg-[#002365] relative overflow-hidden text-white">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-6">
           <div>
@@ -45,7 +45,7 @@ export default function ProjectExperience() {
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#030A16] via-[#030A16]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#002365] via-[#002365]/40 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
               <div>
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
@@ -68,7 +68,7 @@ export default function ProjectExperience() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030A16] via-[#030A16]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#002365] via-[#002365]/30 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5">
                 <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
                   Cable Repair and Protection
@@ -84,7 +84,7 @@ export default function ProjectExperience() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030A16] via-[#030A16]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#002365] via-[#002365]/30 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5">
                 <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
                   Dock and Gate Operations

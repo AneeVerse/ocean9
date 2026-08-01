@@ -20,13 +20,13 @@ import Footer from "@/components/Footer";
 import UnderConstruction from "@/components/UnderConstruction";
 
 // Set to true to show Under Construction page by default, or false to show full website
-const SHOW_UNDER_CONSTRUCTION_BY_DEFAULT = false;
+const SHOW_UNDER_CONSTRUCTION_BY_DEFAULT = true;
 
 function HomeContent() {
   const searchParams = useSearchParams();
   const isPreview = searchParams.get("preview") === "true";
 
-  // Show Under Construction only if flag is enabled and not in preview mode
+  // Show Under Construction page by default unless preview mode is active
   if (SHOW_UNDER_CONSTRUCTION_BY_DEFAULT && !isPreview) {
     return <UnderConstruction />;
   }

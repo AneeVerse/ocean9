@@ -7,7 +7,7 @@ export default function ServicesSection() {
     {
       title: "Air Diving",
       description:
-        "Safe and reliable diving support for inspection, repair, maintenance and construction work.",
+        "We provide air diving services for inspection, repair, cleaning, maintenance and underwater construction work.",
       image: "/assets/home-air-diving-card.png",
     },
     {
@@ -125,7 +125,7 @@ export default function ServicesSection() {
 
                   <div className="pt-2">
                     <Link
-                      href="#contact"
+                      href={service.title === "Air Diving" ? "/services/air-diving" : "/#contact"}
                       className="inline-block font-dm-sans font-bold text-xs sm:text-sm text-[#0055ff] hover:text-[#0038b8] transition-colors"
                     >
                       Read More

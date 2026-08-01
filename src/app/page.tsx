@@ -11,6 +11,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import ProjectExperience from "@/components/ProjectExperience";
 import WorkHistory from "@/components/WorkHistory";
+import ReviewsSection from "@/components/ReviewsSection";
 import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
@@ -41,6 +42,7 @@ function HomeContent() {
       <Testimonials />
       <ProjectExperience />
       <WorkHistory />
+      <ReviewsSection />
       <BlogSection />
       <FAQSection />
       <ContactSection />

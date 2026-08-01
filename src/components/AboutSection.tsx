@@ -10,9 +10,9 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="py-16 sm:py-20 lg:py-24 bg-[#002365] relative overflow-hidden">
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Diver Image (Figma exact 424.2px x 511px) */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-start">
             <div className="relative rounded-[28px] overflow-hidden shadow-2xl border border-white/10 w-full max-w-[424px] h-[380px] sm:h-[450px] lg:h-[511px]">
@@ -59,12 +59,12 @@ export default function AboutSection() {
             </p>
 
             {/* Video Thumbnail + Contact Us Button Row */}
-            <div className="flex flex-wrap items-center gap-6 sm:gap-10 pt-3">
+            <div className="flex flex-wrap sm:flex-nowrap items-center justify-start gap-6 sm:gap-8 pt-3">
               {/* Video Thumbnail Card (Figma exact 405.2px x 146px) */}
               <button
                 onClick={() => setIsVideoModalOpen(true)}
                 type="button"
-                className="relative w-full max-w-[405px] h-[120px] sm:h-[136px] lg:h-[146px] rounded-2xl overflow-hidden group shadow-lg border border-white/10 shrink-0 text-left cursor-pointer focus:outline-none"
+                className="relative w-full sm:w-[405px] max-w-[405px] h-[120px] sm:h-[136px] lg:h-[146px] rounded-2xl overflow-hidden group shadow-lg border border-white/10 shrink-0 text-left cursor-pointer focus:outline-none"
               >
                 <Image
                   src="/assets/home-about-us-video-thumbnail.jpg"
@@ -125,23 +125,33 @@ export default function AboutSection() {
 
       {/* Video Modal Popup */}
       {isVideoModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="relative w-full max-w-4xl bg-[#001947] rounded-2xl overflow-hidden border border-cyan-500/30 p-2">
+        <div
+          onClick={() => setIsVideoModalOpen(false)}
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-lg bg-[#001947] rounded-2xl overflow-hidden border border-cyan-500/30 p-8 sm:p-12 text-center shadow-2xl space-y-4"
+          >
             <button
               onClick={() => setIsVideoModalOpen(false)}
               type="button"
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-cyan-500 transition-colors"
+              className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-cyan-500 transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
-            <div className="aspect-video w-full relative rounded-xl overflow-hidden">
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                title="Ocean 9 Operations Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full border-0"
-              />
+
+            <div className="w-16 h-16 rounded-full bg-cyan-500/10 border border-cyan-500/20 mx-auto flex items-center justify-center text-cyan-400">
+              <Play className="w-7 h-7 ml-0.5 opacity-50" />
+            </div>
+
+            <div className="space-y-1">
+              <h3 className="font-poppins font-semibold text-white text-xl sm:text-2xl">
+                No Video
+              </h3>
+              <p className="font-roboto text-slate-300 text-sm">
+                Video preview is currently unavailable.
+              </p>
             </div>
           </div>
         </div>

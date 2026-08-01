@@ -51,8 +51,8 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Bottom Copy: Subheader, Main Heading (2 lines), Paragraph */}
-            <div className="space-y-3 pt-2">
-              <span className="font-dm-sans font-bold text-xs sm:text-sm text-[#0055ff] tracking-wider uppercase block">
+            <div className="space-y-3 pt-4 sm:pt-5">
+              <span className="font-dm-sans font-bold text-xs sm:text-sm text-[#0055ff] tracking-wider uppercase block mt-2.5 mb-2.5">
                 WHY CHOOSE OCEAN 9
               </span>
 

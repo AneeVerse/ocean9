@@ -91,7 +91,7 @@ export default function FAQSection() {
 
           {/* Right Column: Heading + Accordion List */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
-            <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] text-white leading-tight tracking-tight">
+            <h2 className="font-poppins font-normal text-white text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] leading-tight lg:leading-[1.25] tracking-normal">
               Frequently Asked <br className="hidden sm:inline" />
               Questions
             </h2>

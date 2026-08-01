@@ -22,7 +22,7 @@ const ReviewsSection: React.FC = () => {
             </svg>
             <span className="font-roboto font-normal text-white text-xs sm:text-sm tracking-normal">Testimonials</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white font-poppins tracking-tight">
+          <h2 className="font-poppins font-normal text-white text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] leading-tight lg:leading-[1.25] tracking-normal">
             Voices of Transformation
           </h2>
           <p className="font-roboto font-normal text-slate-200 text-sm sm:text-base lg:text-[17px] max-w-2xl mx-auto leading-relaxed">

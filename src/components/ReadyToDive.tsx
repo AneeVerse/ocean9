@@ -14,7 +14,6 @@ export default function ReadyToDive() {
           className="object-cover object-[center_32%]"
           priority
         />
-        <div className="absolute inset-0 bg-[#00173e]/60 backdrop-blur-[1px]" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
@@ -26,7 +25,7 @@ export default function ReadyToDive() {
         </div>
 
         {/* Main Heading */}
-        <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] text-white tracking-tight drop-shadow-xl leading-tight">
+        <h2 className="font-poppins font-normal text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] text-white tracking-normal leading-tight lg:leading-[1.25] drop-shadow-xl">
           Let’s Discuss Your Requirement
         </h2>
 

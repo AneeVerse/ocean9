@@ -24,13 +24,13 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-[#002365] relative text-white">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-white relative text-slate-900">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left Column: Form Container (Soft Light Blue Card) */}
           <div className="lg:col-span-6 bg-[#e6f3fe] rounded-[24px] lg:rounded-[28px] p-8 sm:p-10 lg:p-12 text-slate-900 shadow-2xl flex flex-col justify-between">
             <div className="space-y-3 mb-6 sm:mb-8">
-              <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-[40px] text-[#002365] leading-tight tracking-tight">
+              <h2 className="font-poppins font-normal text-[#002365] text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] leading-tight lg:leading-[1.25] tracking-normal">
                 Get in Touch
               </h2>
               <p className="font-roboto text-slate-600 text-sm sm:text-base leading-relaxed">

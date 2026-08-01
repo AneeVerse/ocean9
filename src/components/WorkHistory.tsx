@@ -10,14 +10,14 @@ export default function WorkHistory() {
   return (
     <section className="py-12 sm:py-16 bg-[#002365] relative overflow-hidden">
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#001947] border border-[#205b9e]/30 rounded-[24px] p-8 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-[#001947] border border-[#205b9e]/30 rounded-[28px] sm:rounded-[32px] py-12 sm:py-16 lg:py-20 px-8 sm:px-12 lg:px-16 shadow-2xl relative overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Info */}
-            <div className="lg:col-span-7 space-y-3">
-              <h2 className="font-poppins text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
+            <div className="lg:col-span-7 space-y-4">
+              <h2 className="font-poppins font-normal text-white text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] leading-tight lg:leading-[1.25] tracking-normal">
                 Ocean 9’s work history
               </h2>
-              <p className="font-roboto text-slate-200 text-sm sm:text-base leading-relaxed max-w-xl">
+              <p className="font-roboto font-normal text-slate-200 text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-xl">
                 Includes projects for Reliance Industries, the Indian Navy, Adani, Airtel, Tata
                 Communications and other marine and infrastructure clients.
               </p>

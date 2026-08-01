@@ -50,7 +50,7 @@ export default function ProjectExperience() {
             </div>
 
             {/* Heading */}
-            <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-[42px] text-white leading-tight tracking-tight">
+            <h2 className="font-poppins font-normal text-white text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] leading-tight lg:leading-[1.25] tracking-normal">
               Our Project <br className="hidden sm:inline" />
               Experience
             </h2>

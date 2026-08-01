@@ -63,13 +63,23 @@ export default function ServicesSection() {
         {/* Section Header */}
         <div className="relative text-center space-y-3">
           {/* Badge */}
-          <div className="inline-flex items-center justify-center gap-2.5 px-5 h-[40px] rounded-full bg-[#001d54] border border-[#205b9e]/80 shadow-[0_0_15px_rgba(32,91,158,0.2)]">
-            <span className="font-roboto font-medium text-[#20c9d2] text-xs sm:text-sm tracking-wide uppercase">
+          <div className="inline-flex items-center justify-center gap-2.5 px-5 h-[50.39px] rounded-full bg-[#002365] border border-[#205b9e]/80 shadow-[0_0_15px_rgba(32,91,158,0.2)] shrink-0">
+            <svg
+              width="16"
+              height="16"
+              viewBox="-2 -2 28 28"
+              fill="#20c9d2"
+              xmlns="http://www.w3.org/2000/svg"
+              className="shrink-0 overflow-visible"
+            >
+              <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+            </svg>
+            <span className="font-roboto font-normal text-white text-[14px] tracking-normal">
               Our Core Services
             </span>
           </div>
 
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-[44px] text-white tracking-tight">
+          <h2 className="font-poppins font-normal text-white text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] leading-tight lg:leading-[1.25] tracking-normal">
             Services We Provide
           </h2>
           <p className="font-roboto font-normal text-slate-200 text-sm sm:text-base lg:text-[17px] max-w-2xl mx-auto">
@@ -103,7 +113,7 @@ export default function ServicesSection() {
                 className="w-[250px] sm:w-[270px] lg:w-[280px] xl:w-[290px] h-auto rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-xl flex flex-col shrink-0 snap-start transition-transform duration-300 hover:-translate-y-1.5 group"
               >
                 {/* Card Top Image */}
-                <div className="relative h-[175px] sm:h-[185px] lg:h-[195px] w-full overflow-hidden bg-slate-900 rounded-t-[20px] sm:rounded-t-[24px] shrink-0">
+                <div className="relative h-[210px] sm:h-[225px] lg:h-[235px] w-full overflow-hidden bg-slate-900 rounded-t-[20px] sm:rounded-t-[24px] shrink-0">
                   <Image
                     src={service.image}
                     alt={service.title}

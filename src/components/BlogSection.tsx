@@ -55,8 +55,8 @@ export default function BlogSection() {
             </span>
           </div>
 
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-[42px] text-white leading-tight tracking-tight">
-            Our Lates Blog
+          <h2 className="font-poppins font-normal text-white text-3xl sm:text-4xl lg:text-[42px] xl:text-[48px] leading-tight lg:leading-[1.25] tracking-normal">
+            Latest Insights & Articles
           </h2>
 
           <p className="font-roboto text-slate-200 text-sm sm:text-base leading-relaxed">

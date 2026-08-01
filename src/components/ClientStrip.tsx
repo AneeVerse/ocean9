@@ -42,14 +42,14 @@ export default function ClientStrip() {
       {/* Top Wave: Sweeping Curve */}
       <div className="w-full overflow-hidden leading-none bg-[#020917] -mb-px">
         <svg
-          viewBox="0 0 1440 80"
+          viewBox="0 0 1440 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="relative block w-full h-[36px] sm:h-[52px] lg:h-[68px]"
+          className="relative block w-full h-[46px] sm:h-[64px] lg:h-[84px]"
           preserveAspectRatio="none"
         >
           <path
-            d="M0 0 Q 720 54 1440 0 L 1440 81 L 0 81 Z"
+            d="M0 0 Q 720 76 1440 0 L 1440 101 L 0 101 Z"
             fill="#FFFFFF"
           />
         </svg>
@@ -98,14 +98,14 @@ export default function ClientStrip() {
       {/* Bottom Wave: Sweeping Curve */}
       <div className="w-full overflow-hidden leading-none bg-[#002365] -mt-px">
         <svg
-          viewBox="0 0 1440 80"
+          viewBox="0 0 1440 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="relative block w-full h-[36px] sm:h-[52px] lg:h-[68px]"
+          className="relative block w-full h-[46px] sm:h-[64px] lg:h-[84px]"
           preserveAspectRatio="none"
         >
           <path
-            d="M0 0 L 1440 0 L 1440 81 Q 720 26 0 81 Z"
+            d="M0 0 L 1440 0 L 1440 101 Q 720 24 0 101 Z"
             fill="#FFFFFF"
           />
         </svg>

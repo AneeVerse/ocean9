@@ -105,7 +105,7 @@ export default function ClientStrip() {
           preserveAspectRatio="none"
         >
           <path
-            d="M0 0 L 1440 0 L 1440 101 Q 720 24 0 101 Z"
+            d="M0 0 L 1440 0 L 1440 101 Q 720 25 0 101 Z"
             fill="#FFFFFF"
           />
         </svg>

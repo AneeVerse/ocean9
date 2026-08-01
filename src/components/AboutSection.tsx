@@ -9,7 +9,7 @@ export default function AboutSection() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
-    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-[#002365] relative overflow-hidden">
+    <section id="about" className="py-12 sm:py-16 lg:py-20 bg-[#002365] relative overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -27,8 +27,8 @@ export default function AboutSection() {
 
           {/* Right Column: Copy & Video / Contact CTA */}
           <div className="lg:col-span-7 space-y-6">
-            {/* Tag / Badge: Figma exact 138.67px x 50.39px */}
-            <div className="inline-flex items-center justify-center gap-2.5 w-[138.67px] h-[50.39px] rounded-full bg-[#002365] border border-[#205b9e]/80 shadow-[0_0_15px_rgba(32,91,158,0.2)] shrink-0">
+            {/* Tag / Badge: About Ocean 9 */}
+            <div className="inline-flex items-center justify-center gap-2.5 px-5 h-[50.39px] rounded-full bg-[#002365] border border-[#205b9e]/80 shadow-[0_0_15px_rgba(32,91,158,0.2)] shrink-0">
               <svg
                 width="16"
                 height="16"
@@ -39,7 +39,7 @@ export default function AboutSection() {
               >
                 <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
               </svg>
-              <span className="font-roboto font-normal text-white text-[14px] tracking-normal">About Us</span>
+              <span className="font-roboto font-normal text-white text-[14px] tracking-normal">About Ocean 9</span>
             </div>
 
             {/* Heading: Exactly 2 lines */}
@@ -48,19 +48,24 @@ export default function AboutSection() {
               Operations
             </h2>
 
-            {/* Paragraph 1: Exactly 1 single line */}
+            {/* Paragraph 1 */}
             <p className="font-roboto font-normal text-slate-300 text-xs sm:text-sm lg:text-[14px] xl:text-[15px] leading-relaxed tracking-normal max-w-none lg:whitespace-nowrap">
               Ocean 9 Offshore Services Pvt. Ltd. provides underwater diving, marine and subsea engineering services.
             </p>
 
+            {/* Paragraph 2 */}
             <p className="font-roboto font-normal text-slate-300 text-sm sm:text-base leading-relaxed tracking-normal max-w-2xl">
-              We support offshore and onshore projects with trained teams, diving equipment and
-              marine support. Our focus is simple: complete every job safely, properly and on time.
+              We support offshore and onshore projects with trained teams, diving equipment and marine support. Our focus is simple: complete every job safely, properly and on time.
             </p>
 
-            {/* Video Thumbnail + Contact Us Button Row */}
+            {/* Company Profile Description */}
+            <p className="font-roboto font-normal text-slate-300 text-sm sm:text-base leading-relaxed tracking-normal max-w-2xl">
+              Ocean 9’s company profile describes the business as an underwater diving and subsea engineering service provider with diving personnel, equipment and vessel support.
+            </p>
+
+            {/* Video Thumbnail + About Ocean 9 Button Row */}
             <div className="flex flex-wrap sm:flex-nowrap items-center justify-start gap-6 sm:gap-8 pt-3">
-              {/* Video Thumbnail Card (Figma exact 405.2px x 146px) */}
+              {/* Video Thumbnail Card */}
               <button
                 onClick={() => setIsVideoModalOpen(true)}
                 type="button"
@@ -80,12 +85,12 @@ export default function AboutSection() {
                 </div>
               </button>
 
-              {/* Contact Us White Pill Button: Figma exact 179.27px x 55px */}
+              {/* About Ocean 9 Button */}
               <Link
-                href="#contact"
-                className="inline-flex items-center justify-between w-[179.27px] h-[55px] bg-white hover:bg-slate-100 pl-6 pr-1.5 rounded-full transition-all duration-300 shadow-xl group transform hover:scale-[1.02] cursor-pointer shrink-0"
+                href="#about"
+                className="inline-flex items-center justify-between gap-4 min-w-[200px] h-[55px] bg-white hover:bg-slate-100 pl-6 pr-1.5 rounded-full transition-all duration-300 shadow-xl group transform hover:scale-[1.02] cursor-pointer shrink-0"
               >
-                <span className="font-dm-sans font-medium text-[#002365] text-[15px] leading-[30px] tracking-normal whitespace-nowrap">Contact Us</span>
+                <span className="font-dm-sans font-medium text-[#002365] text-[15px] leading-[30px] tracking-normal whitespace-nowrap">About Ocean 9</span>
                 <div className="w-[43px] h-[43px] rounded-full bg-[#002365] flex items-center justify-center text-white group-hover:translate-x-0.5 transition-transform shrink-0">
                   <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                 </div>

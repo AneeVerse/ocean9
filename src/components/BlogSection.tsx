@@ -34,7 +34,7 @@ export default function BlogSection() {
   ];
 
   return (
-    <section id="blog" className="py-16 sm:py-20 lg:py-24 bg-[#002365] relative text-white">
+    <section id="blog" className="py-12 sm:py-16 lg:py-20 bg-[#002365] relative text-white">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14 space-y-4">

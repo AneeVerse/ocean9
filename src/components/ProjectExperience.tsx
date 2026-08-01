@@ -3,8 +3,31 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function ProjectExperience() {
+  const projects = [
+    {
+      title: "Underwater Salvage",
+      description: "Recovery of sunken pontoons, gates, anchors and marine structures.",
+      image: "/assets/home-under-water-savage.jpg",
+    },
+    {
+      title: "Cable Repair and Protection",
+      description: "Underwater cable repair, trenching, burial and protection work.",
+      image: "/assets/home-cable-repair-and-protection.jpg",
+    },
+    {
+      title: "Dock and Gate Operations",
+      description: "Inspection, cleaning, installation and repair support for dock gates.",
+      image: "/assets/home-dock-and-gate-operation.jpg",
+    },
+    {
+      title: "Industrial Diving Support",
+      description: "Inspection, cleaning, desilting and repair work for intake wells and industrial sites.",
+      image: "/assets/contact_diver_panel.png",
+    },
+  ];
+
   return (
-    <section id="projects" className="py-16 sm:py-20 lg:py-24 bg-[#002365] relative overflow-hidden text-white">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-[#002365] relative overflow-hidden text-white">
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-14 gap-6">
@@ -35,8 +58,7 @@ export default function ProjectExperience() {
 
           <div className="max-w-md space-y-4">
             <p className="font-roboto text-slate-200 text-sm sm:text-base leading-relaxed">
-              We have completed underwater and marine work for ports, docks, industries,
-              vessels and offshore projects.
+              We have completed underwater and marine work for ports, docks, industries, vessels and offshore projects.
             </p>
             <Link
               href="#projects"
@@ -52,56 +74,54 @@ export default function ProjectExperience() {
           </div>
         </div>
 
-        {/* Project Grid Layout: Images section fits in one fold */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch lg:h-[560px]">
-          {/* Main Large Card (Left): Vertical portrait image aligned top & bottom */}
+        {/* Project Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch lg:h-[620px]">
+          {/* Main Featured Project Card (Left) */}
           <div className="lg:col-span-6 group relative rounded-[24px] overflow-hidden aspect-[549/650] lg:aspect-auto lg:h-full w-full border border-white/10 shadow-2xl bg-slate-900">
             <Image
-              src="/assets/home-under-water-savage.jpg"
-              alt="Underwater Salvage Project"
+              src={projects[0].image}
+              alt={projects[0].title}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute bottom-6 left-6 right-6 z-10">
-              <h3 className="font-poppins font-bold text-xl sm:text-2xl text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] group-hover:text-cyan-300 transition-colors">
-                Underwater Salvage
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
+            <div className="absolute bottom-6 left-6 right-6 z-10 space-y-2">
+              <h3 className="font-poppins font-bold text-xl sm:text-2xl text-white group-hover:text-cyan-300 transition-colors">
+                {projects[0].title}
               </h3>
+              <p className="font-roboto text-slate-200 text-xs sm:text-sm leading-relaxed max-w-md">
+                {projects[0].description}
+              </p>
             </div>
           </div>
 
-          {/* Right Column (2 Stacked Cards): Perfectly aligned top & bottom with left card */}
-          <div className="lg:col-span-6 flex flex-col gap-5 sm:gap-6 lg:h-full">
-            {/* Card 2: Cable Repair */}
-            <div className="flex-1 group relative rounded-[24px] overflow-hidden aspect-[611/409] lg:aspect-auto min-h-[180px] sm:min-h-[220px] w-full border border-white/10 shadow-2xl bg-slate-900">
-              <Image
-                src="/assets/home-cable-repair-and-protection.jpg"
-                alt="Cable Repair and Protection"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute bottom-5 sm:bottom-6 left-5 sm:left-6 right-5 sm:right-6 z-10">
-                <h3 className="font-poppins font-bold text-lg sm:text-xl text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] group-hover:text-cyan-300 transition-colors">
-                  Cable Repair and Protection
-                </h3>
+          {/* Right Column Stacked Cards */}
+          <div className="lg:col-span-6 flex flex-col gap-4 sm:gap-4 lg:h-full">
+            {projects.slice(1).map((proj, idx) => (
+              <div
+                key={idx}
+                className="flex-1 group relative rounded-[20px] sm:rounded-[24px] overflow-hidden min-h-[160px] sm:min-h-[180px] w-full border border-white/10 shadow-xl bg-slate-900"
+              >
+                <Image
+                  src={proj.image}
+                  alt={proj.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-5 right-5 z-10 space-y-1">
+                  <h3 className="font-poppins font-bold text-base sm:text-lg text-white group-hover:text-cyan-300 transition-colors">
+                    {proj.title}
+                  </h3>
+                  <p className="font-roboto text-slate-200 text-xs leading-relaxed max-w-md">
+                    {proj.description}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {/* Card 3: Dock and Gate Operations */}
-            <div className="flex-1 group relative rounded-[24px] overflow-hidden aspect-[611/409] lg:aspect-auto min-h-[180px] sm:min-h-[220px] w-full border border-white/10 shadow-2xl bg-slate-900">
-              <Image
-                src="/assets/home-dock-and-gate-operation.jpg"
-                alt="Dock and Gate Operations"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute bottom-5 sm:bottom-6 left-5 sm:left-6 right-5 sm:right-6 z-10">
-                <h3 className="font-poppins font-bold text-lg sm:text-xl text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] group-hover:text-cyan-300 transition-colors">
-                  Dock and Gate Operations
-                </h3>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+
       </div>
     </section>
   );

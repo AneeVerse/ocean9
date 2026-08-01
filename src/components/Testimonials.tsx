@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           {/* Left Side: Diver Image - Exact Figma 630x550 Sizing */}

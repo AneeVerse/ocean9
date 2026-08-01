@@ -22,9 +22,9 @@ export default function Hero() {
       {/* Main Hero Content - Vertically centered inside 100vh single fold */}
       <div className="relative z-10 max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center pt-24 sm:pt-28 pb-12">
         <div className="max-w-[950px]">
-          {/* Badge matching exact Figma specs (h-34px, px-12px, py-2px, rounded-50px, #003D82) */}
-          <div className="inline-flex items-center justify-center h-[34px] px-[12px] py-[2px] rounded-[50px] bg-[#003D82] text-white text-xs font-bold tracking-wider uppercase mb-5 shadow-md">
-            FROM SEABED TO SURFACE
+          {/* Badge */}
+          <div className="inline-flex items-center justify-center h-[34px] px-[14px] py-[2px] rounded-[50px] bg-[#003D82] text-white text-xs font-bold tracking-wider uppercase mb-5 shadow-md">
+            From Seabed to Surface
           </div>
 
           {/* Headline strictly in 2 lines breaking after Diving, */}
@@ -39,16 +39,25 @@ export default function Hero() {
             underwater projects.
           </p>
 
-          {/* Contact Us White Pill CTA */}
-          <div>
+          {/* CTA Buttons: Primary & Secondary */}
+          <div className="flex flex-wrap items-center gap-4">
+            {/* Primary Button */}
             <Link
-              href="#contact"
-              className="inline-flex items-center gap-3 bg-white hover:bg-slate-100 p-1.5 pl-6 rounded-full transition-all duration-300 shadow-xl group transform hover:scale-[1.02]"
+              href="#services"
+              className="inline-flex items-center justify-between gap-3.5 h-[52px] bg-white hover:bg-slate-100 text-[#002365] pl-6 pr-1.5 rounded-full font-semibold text-sm sm:text-[15px] transition-all duration-300 shadow-[0_4px_20px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_25px_rgba(255,255,255,0.25)] group transform hover:scale-[1.02] cursor-pointer"
             >
-              <span className="text-[#081935] font-semibold text-xs sm:text-sm">Contact Us</span>
-              <div className="w-9 h-9 rounded-full bg-[#003D82] flex items-center justify-center text-white group-hover:translate-x-0.5 transition-transform">
+              <span>Explore Our Services</span>
+              <div className="w-[40px] h-[40px] rounded-full bg-[#003D82] flex items-center justify-center text-white group-hover:translate-x-0.5 transition-transform shrink-0 shadow-sm">
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </div>
+            </Link>
+
+            {/* Secondary Button */}
+            <Link
+              href="#contact"
+              className="inline-flex items-center justify-center h-[52px] bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/60 text-white backdrop-blur-md px-7 rounded-full font-semibold text-sm sm:text-[15px] transition-all duration-300 shadow-lg transform hover:scale-[1.02] cursor-pointer"
+            >
+              <span>Contact Us</span>
             </Link>
           </div>
         </div>

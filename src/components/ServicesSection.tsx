@@ -34,24 +34,49 @@ export default function ServicesSection() {
         "Underwater services for ports, docks, dams, intake wells, rivers and inland projects.",
       image: "/assets/home-onshore-operations-card.png",
     },
+    {
+      title: "Marine Survey and Inspection",
+      description:
+        "Survey, inspection, underwater video and data support for vessels, pipelines and structures.",
+      image: "/assets/home-cable-repair-and-protection.jpg",
+    },
+    {
+      title: "Underwater Cutting, Welding and Salvage",
+      description:
+        "Cutting, welding, recovery and salvage services for underwater structures and equipment.",
+      image: "/assets/home-under-water-savage.jpg",
+    },
+    {
+      title: "Marine Crew and Manning",
+      description:
+        "Qualified diving personnel and marine crew for offshore and onshore projects.",
+      image: "/assets/home-dock-and-gate-operation.jpg",
+    },
   ];
 
   // Duplicate set to enable smooth horizontal scrolling
   const services = [...baseServices, ...baseServices];
 
   return (
-    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-[#002365] relative overflow-hidden">
+    <section id="services" className="py-12 sm:py-16 lg:py-20 bg-[#002365] relative overflow-hidden">
       <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         {/* Section Header */}
-        <div className="relative text-center">
+        <div className="relative text-center space-y-3">
+          {/* Badge */}
+          <div className="inline-flex items-center justify-center gap-2.5 px-5 h-[40px] rounded-full bg-[#001d54] border border-[#205b9e]/80 shadow-[0_0_15px_rgba(32,91,158,0.2)]">
+            <span className="font-roboto font-medium text-[#20c9d2] text-xs sm:text-sm tracking-wide uppercase">
+              Our Core Services
+            </span>
+          </div>
+
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-[44px] text-white tracking-tight">
             Services We Provide
           </h2>
-          <p className="font-roboto font-normal text-slate-200 text-sm sm:text-base lg:text-[17px] mt-2 max-w-2xl mx-auto">
+          <p className="font-roboto font-normal text-slate-200 text-sm sm:text-base lg:text-[17px] max-w-2xl mx-auto">
             Complete support for underwater, offshore and marine projects.
           </p>
 
-          {/* Top Right "View All Services" Button: Figma exact spec */}
+          {/* Top Right "View All Services" Button */}
           <div className="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 mt-6 md:mt-0 flex justify-center md:justify-end">
             <Link
               href="#services"
@@ -69,49 +94,56 @@ export default function ServicesSection() {
       </div>
 
       {/* Horizontal Scrollable Cards Track */}
-      <div className="w-full overflow-x-auto scrollbar-none pb-8 pt-2">
+      <div className="w-full overflow-x-auto scrollbar-none pb-4 pt-2">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-4 sm:gap-4.5 lg:gap-5 w-max pr-12">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="w-[235px] sm:w-[250px] lg:w-[260px] xl:w-[265px] h-auto rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-xl flex flex-col shrink-0 snap-start transition-transform duration-300 hover:-translate-y-1.5 group"
-            >
-              {/* Card Top Image */}
-              <div className="relative h-[175px] sm:h-[185px] lg:h-[195px] w-full overflow-hidden bg-slate-900 rounded-t-[20px] sm:rounded-t-[24px] shrink-0">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-
-              {/* Card Bottom White Content Box - Height according to content */}
-              <div className="bg-white p-4 sm:p-5 rounded-b-[20px] sm:rounded-b-[24px] text-center flex-1 flex flex-col justify-between space-y-3">
-                <div>
-                  <h3 className="font-poppins font-bold text-base sm:text-lg text-[#081935] mb-2 leading-snug">
-                    {service.title}
-                  </h3>
-                  <p className="font-roboto font-normal text-slate-600 text-xs sm:text-[13px] leading-relaxed">
-                    {service.description}
-                  </p>
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="w-[250px] sm:w-[270px] lg:w-[280px] xl:w-[290px] h-auto rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-xl flex flex-col shrink-0 snap-start transition-transform duration-300 hover:-translate-y-1.5 group"
+              >
+                {/* Card Top Image */}
+                <div className="relative h-[175px] sm:h-[185px] lg:h-[195px] w-full overflow-hidden bg-slate-900 rounded-t-[20px] sm:rounded-t-[24px] shrink-0">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
 
-                <div className="pt-2">
-                  <Link
-                    href="#contact"
-                    className="inline-block font-dm-sans font-bold text-xs sm:text-sm text-[#0055ff] hover:text-[#0038b8] transition-colors"
-                  >
-                    Read More
-                  </Link>
+                {/* Card Bottom White Content Box */}
+                <div className="bg-white p-4 sm:p-5 rounded-b-[20px] sm:rounded-b-[24px] text-center flex-1 flex flex-col justify-between space-y-3">
+                  <div>
+                    <h3 className="font-poppins font-bold text-base sm:text-lg text-[#081935] mb-2 leading-snug">
+                      {service.title}
+                    </h3>
+                    <p className="font-roboto font-normal text-slate-600 text-xs sm:text-[13px] leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-2">
+                    <Link
+                      href="#contact"
+                      className="inline-block font-dm-sans font-bold text-xs sm:text-sm text-[#0055ff] hover:text-[#0038b8] transition-colors"
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+
+      {/* Footnote Scope Notice */}
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+        <p className="font-roboto text-xs sm:text-sm text-slate-300 text-center max-w-none lg:whitespace-nowrap mx-auto italic opacity-90">
+          These services are supported by Ocean 9’s profile, old Dive Safe catalogue and approved website scope.
+        </p>
+      </div>
+    </section>
   );
 }

@@ -40,7 +40,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-[#002365] relative overflow-hidden text-white">
+    <section id="faq" className="py-12 sm:py-16 lg:py-20 bg-[#002365] relative overflow-hidden text-white">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
           {/* Left Column: Badge + Image with Call Us Box */}

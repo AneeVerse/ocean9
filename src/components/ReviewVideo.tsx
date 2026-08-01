@@ -251,7 +251,7 @@ export default function ReviewVideo() {
 
   return (
     <>
-      <div className="w-full overflow-hidden py-8 sm:py-10">
+      <div className="w-full overflow-hidden py-2">
         <div className="w-full">
           <div
             className="relative py-2"

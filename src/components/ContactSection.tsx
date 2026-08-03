@@ -25,7 +25,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-white relative text-slate-900">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left Column: Form Container (Soft Light Blue Card) */}
           <div className="lg:col-span-6 bg-[#e6f3fe] rounded-[24px] lg:rounded-[28px] p-8 sm:p-10 lg:p-12 text-slate-900 shadow-2xl flex flex-col justify-between">

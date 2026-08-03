@@ -11,7 +11,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
+      if (window.scrollY > 250) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -25,10 +25,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
         isScrolled
-          ? "bg-[#02102b]/90 backdrop-blur-xl py-2 sm:py-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
-          : "bg-transparent py-4 sm:py-5"
+          ? "bg-white/95 backdrop-blur-md py-2 sm:py-2.5 shadow-md"
+          : "bg-gradient-to-b from-[#020917]/80 via-[#020917]/40 to-transparent py-4 sm:py-5"
       }`}
     >
       <div
@@ -41,65 +41,89 @@ export default function Navbar() {
           <div
             className={`relative flex items-center transition-all duration-500 ease-in-out ${
               isScrolled
-                ? "w-[170px] sm:w-[190px] h-[46px] sm:h-[52px]"
-                : "w-[190px] sm:w-[210px] h-[52px] sm:h-[60px]"
+                ? "w-[240px] sm:w-[270px] h-[56px] sm:h-[65px]"
+                : "w-[280px] sm:w-[350px] lg:w-[380px] h-[75px] sm:h-[90px]"
             }`}
           >
             <Image
-              src="/assets/ocean9-logo.png"
+              src="/assets/ocean9-logo2.png"
               alt="Ocean 9 Logo"
               fill
-              className="object-contain object-left scale-100 origin-left"
+              className="object-contain object-left scale-120 sm:scale-135 origin-left"
               priority
             />
           </div>
         </Link>
 
-        {/* Desktop Navigation Links: Exact Figma properties (SemiBold 600, 16px, line-height 22px) */}
+        {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-[34px]">
           <Link
             href="/"
-            className="text-white font-semibold text-[16px] leading-[22px] tracking-normal hover:text-cyan-400 transition-colors"
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+              isScrolled
+                ? "text-[#002365] hover:text-[#0055ff]"
+                : "text-white hover:text-cyan-400"
+            }`}
           >
             Home
           </Link>
           <Link
             href="/#about"
-            className="text-slate-200 font-semibold text-[16px] leading-[22px] tracking-normal hover:text-cyan-400 transition-colors"
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+              isScrolled
+                ? "text-[#002365]/90 hover:text-[#0055ff]"
+                : "text-slate-200 hover:text-cyan-400"
+            }`}
           >
             About Us
           </Link>
           <Link
             href="/#services"
-            className="text-slate-200 font-semibold text-[16px] leading-[22px] tracking-normal hover:text-cyan-400 transition-colors"
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+              isScrolled
+                ? "text-[#002365]/90 hover:text-[#0055ff]"
+                : "text-slate-200 hover:text-cyan-400"
+            }`}
           >
             Service
           </Link>
           <Link
             href="/#projects"
-            className="text-slate-200 font-semibold text-[16px] leading-[22px] tracking-normal hover:text-cyan-400 transition-colors"
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+              isScrolled
+                ? "text-[#002365]/90 hover:text-[#0055ff]"
+                : "text-slate-200 hover:text-cyan-400"
+            }`}
           >
             Projects
           </Link>
           <Link
             href="/#blog"
-            className="text-slate-200 font-semibold text-[16px] leading-[22px] tracking-normal hover:text-cyan-400 transition-colors"
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+              isScrolled
+                ? "text-[#002365]/90 hover:text-[#0055ff]"
+                : "text-slate-200 hover:text-cyan-400"
+            }`}
           >
             Gallery
           </Link>
           <Link
             href="/#faq"
-            className="text-slate-200 font-semibold text-[16px] leading-[22px] tracking-normal hover:text-cyan-400 transition-colors"
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+              isScrolled
+                ? "text-[#002365]/90 hover:text-[#0055ff]"
+                : "text-slate-200 hover:text-cyan-400"
+            }`}
           >
             HSE
           </Link>
         </nav>
 
-        {/* Proportioned CONTACT NOW Navbar Button (#003D82, h-46px, px-6, text-xs uppercase bold) */}
+        {/* Proportioned CONTACT NOW Navbar Button */}
         <div className="hidden md:flex items-center">
           <Link
             href="/#contact"
-            className="inline-flex items-center justify-center h-[46px] px-6 bg-[#003D82] hover:bg-[#003169] text-white font-bold text-xs tracking-wider uppercase rounded-full transition-all shadow-md transform hover:scale-[1.02]"
+            className="inline-flex items-center justify-center h-[46px] px-6 bg-[#003D82] hover:bg-[#002855] text-white font-bold text-xs tracking-wider uppercase rounded-full transition-all shadow-md transform hover:scale-[1.02]"
           >
             CONTACT NOW
           </Link>
@@ -108,7 +132,9 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-slate-200 hover:text-white p-2"
+          className={`md:hidden p-2 transition-colors ${
+            isScrolled ? "text-[#002365] hover:text-[#0055ff]" : "text-white hover:text-cyan-400"
+          }`}
           aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -117,46 +143,52 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#002365]/95 backdrop-blur-xl border-b border-white/10 px-6 pt-4 pb-6 space-y-4">
+        <div
+          className={`md:hidden px-6 pt-4 pb-6 space-y-4 shadow-xl border-b transition-all ${
+            isScrolled
+              ? "bg-white/95 backdrop-blur-xl border-slate-200 text-[#002365]"
+              : "bg-[#002365]/95 backdrop-blur-xl border-white/10 text-white"
+          }`}
+        >
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-white font-semibold text-[16px] py-1.5"
+            className="block font-semibold text-[16px] py-1.5"
           >
             Home
           </Link>
           <Link
             href="/#about"
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-slate-300 hover:text-cyan-400 text-[16px] py-1.5"
+            className="block text-[16px] py-1.5 opacity-90 hover:opacity-100"
           >
             About Us
           </Link>
           <Link
             href="/#services"
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-slate-300 hover:text-cyan-400 text-[16px] py-1.5"
+            className="block text-[16px] py-1.5 opacity-90 hover:opacity-100"
           >
             Service
           </Link>
           <Link
             href="/#projects"
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-slate-300 hover:text-cyan-400 text-[16px] py-1.5"
+            className="block text-[16px] py-1.5 opacity-90 hover:opacity-100"
           >
             Projects
           </Link>
           <Link
             href="/#blog"
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-slate-300 hover:text-cyan-400 text-[16px] py-1.5"
+            className="block text-[16px] py-1.5 opacity-90 hover:opacity-100"
           >
             Gallery
           </Link>
           <Link
             href="/#faq"
             onClick={() => setMobileMenuOpen(false)}
-            className="block text-slate-300 hover:text-cyan-400 text-[16px] py-1.5"
+            className="block text-[16px] py-1.5 opacity-90 hover:opacity-100"
           >
             HSE
           </Link>
@@ -164,7 +196,7 @@ export default function Navbar() {
             <Link
               href="/#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="inline-flex items-center justify-center w-full h-[46px] bg-[#003D82] hover:bg-[#003169] text-white font-bold text-xs tracking-wider uppercase px-6 rounded-full"
+              className="inline-flex items-center justify-center w-full h-[46px] bg-[#003D82] hover:bg-[#002855] text-white font-bold text-xs tracking-wider uppercase px-6 rounded-full shadow-md"
             >
               CONTACT NOW
             </Link>

@@ -5,7 +5,7 @@ import ReviewVideo from "./ReviewVideo";
 
 const ReviewsSection: React.FC = () => {
   return (
-    <section id="reviews-section" className="relative py-12 sm:py-16 lg:py-20 bg-[#002365] text-white overflow-hidden border-t border-white/10">
+    <section id="reviews-section" className="relative py-12 sm:py-16 lg:py-20 bg-transparent text-white overflow-hidden">
       <div className="w-full">
         {/* Voices of Transformation Header */}
         <div className="text-center mb-8 sm:mb-12 px-4 max-w-[1320px] mx-auto space-y-3">

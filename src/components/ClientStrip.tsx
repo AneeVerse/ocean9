@@ -38,7 +38,7 @@ export default function ClientStrip() {
   const trackClients = [...clients, ...clients, ...clients];
 
   return (
-    <div className="relative bg-[#002365] z-20 overflow-hidden">
+    <div className="relative bg-transparent z-20 overflow-hidden">
       {/* Top Wave: Sweeping Curve */}
       <div className="w-full overflow-hidden leading-none bg-[#020917] -mb-px">
         <svg
@@ -96,7 +96,7 @@ export default function ClientStrip() {
       </section>
 
       {/* Bottom Wave: Sweeping Curve */}
-      <div className="w-full overflow-hidden leading-none bg-[#002365] -mt-px">
+      <div className="w-full overflow-hidden leading-none bg-transparent -mt-px">
         <svg
           viewBox="0 0 1440 100"
           fill="none"

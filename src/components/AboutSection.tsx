@@ -9,8 +9,8 @@ export default function AboutSection() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
-    <section id="about" className="py-12 sm:py-16 lg:py-20 bg-[#002365] relative overflow-hidden">
-      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-12 sm:py-16 lg:py-20 bg-transparent relative overflow-hidden">
+      <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Diver Image (Figma exact 424.2px x 511px) */}

@@ -346,53 +346,49 @@ export default function AirDivingPage() {
                 
                 {/* Card 1: Trained Divers */}
                 <div className="bg-white rounded-2xl p-4 sm:p-4.5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-slate-100/80 flex flex-col items-center justify-center text-center space-y-2.5 transition-all hover:shadow-md">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0038b8] flex items-center justify-center text-white shrink-0 shadow-md">
-                    <svg className="w-6 h-6 sm:w-7 sm:h-7 stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M6.5 11.5C6.5 6.8 10 3 14.5 3C19 3 22.5 6.8 22.5 11.5V15.5H6.5V11.5Z" />
-                      <ellipse cx="14.5" cy="11.5" rx="4.2" ry="2.8" />
-                      <path d="M12.8 9.8C13.6 9.3 15.2 9.3 16.2 9.9" />
-                      <path d="M6.5 13.5H3.5C2 13.5 1.5 15 1.5 16.5" />
-                      <path d="M5.5 18.5H23.5V20.5C23.5 21.6 22.6 22.5 21.5 22.5H7.5C6.4 22.5 5.5 21.6 5.5 20.5V18.5Z" />
-                      <circle cx="8.5" cy="20.5" r="0.6" fill="currentColor" stroke="none" />
-                      <circle cx="14.5" cy="20.5" r="0.6" fill="currentColor" stroke="none" />
-                      <circle cx="20.5" cy="20.5" r="0.6" fill="currentColor" stroke="none" />
-                    </svg>
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0038b8] flex items-center justify-center text-white shrink-0 shadow-md p-2.5">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src="/images/services/air-diving/diver-new.png"
+                        alt="Trained Divers"
+                        fill
+                        className="object-contain filter brightness-0 invert"
+                      />
+                    </div>
                   </div>
                   <span className="font-poppins font-bold text-[#081836] text-xs sm:text-[13px] leading-tight">
                     Trained<br />Divers
                   </span>
                 </div>
 
-                {/* Card 2: Advanced Equipment (Twin Oxygen/Air Tanks) */}
+                {/* Card 2: Advanced Equipment */}
                 <div className="bg-white rounded-2xl p-4 sm:p-4.5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-slate-100/80 flex flex-col items-center justify-center text-center space-y-2.5 transition-all hover:shadow-md">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0038b8] flex items-center justify-center text-white shrink-0 shadow-md">
-                    <svg className="w-6 h-6 sm:w-7 sm:h-7 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="4.5" y="7" width="5.8" height="13" rx="2.9" />
-                      <rect x="13.7" y="7" width="5.8" height="13" rx="2.9" />
-                      <path d="M7.4 3v4M16.6 3v4" />
-                      <path d="M5.5 3h3.8M14.7 3h3.8" />
-                      <path d="M7.4 5h9.2" />
-                      <path d="M4.5 11h5.8M13.7 11h5.8" />
-                      <path d="M4.5 16h5.8M13.7 16h5.8" />
-                    </svg>
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0038b8] flex items-center justify-center text-white shrink-0 shadow-md p-2.5">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src="/images/services/air-diving/cylinder.png"
+                        alt="Advanced Equipment"
+                        fill
+                        className="object-contain filter brightness-0 invert"
+                      />
+                    </div>
                   </div>
                   <span className="font-poppins font-bold text-[#081836] text-xs sm:text-[13px] leading-tight">
                     Advanced<br />Equipment
                   </span>
                 </div>
 
-                {/* Card 3: Surface Support (Offshore Vessel & Waves) */}
+                {/* Card 3: Surface Support */}
                 <div className="bg-white rounded-2xl p-4 sm:p-4.5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-slate-100/80 flex flex-col items-center justify-center text-center space-y-2.5 transition-all hover:shadow-md">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0038b8] flex items-center justify-center text-white shrink-0 shadow-md">
-                    <svg className="w-6 h-6 sm:w-7 sm:h-7 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M3 15l2.2 4.5h13.6L21 15H3z" />
-                      <path d="M7 15V9.5h10V15" />
-                      <path d="M14 9.5V5l3 2" />
-                      <path d="M9.5 9.5V6.5" />
-                      <circle cx="10" cy="12" r="0.75" fill="currentColor" stroke="none" />
-                      <circle cx="14" cy="12" r="0.75" fill="currentColor" stroke="none" />
-                      <path d="M2 20.5c2 0 3-1 4.5-1s2.5 1 4.5 1 3-1 4.5-1 2.5 1 4.5 1" />
-                    </svg>
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0038b8] flex items-center justify-center text-white shrink-0 shadow-md p-2.5">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src="/images/services/air-diving/cruise.png"
+                        alt="Surface Support"
+                        fill
+                        className="object-contain filter brightness-0 invert"
+                      />
+                    </div>
                   </div>
                   <span className="font-poppins font-bold text-[#081836] text-xs sm:text-[13px] leading-tight">
                     Surface<br />Support

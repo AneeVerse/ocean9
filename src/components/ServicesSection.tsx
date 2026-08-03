@@ -58,8 +58,8 @@ export default function ServicesSection() {
   const services = [...baseServices, ...baseServices];
 
   return (
-    <section id="services" className="py-12 sm:py-16 lg:py-20 bg-[#002365] relative overflow-hidden">
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <section id="services" className="py-12 sm:py-16 lg:py-20 bg-transparent relative overflow-hidden">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
         {/* Section Header */}
         <div className="relative text-center space-y-3">
           {/* Badge */}
@@ -104,13 +104,14 @@ export default function ServicesSection() {
       </div>
 
       {/* Horizontal Scrollable Cards Track */}
-      <div className="w-full overflow-x-auto scrollbar-none pb-4 pt-2">
+      <div className="w-full overflow-x-auto scrollbar-none pb-4 pt-2 relative z-10">
         <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-4 sm:gap-4.5 lg:gap-5 w-max pr-12">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="w-[250px] sm:w-[270px] lg:w-[280px] xl:w-[290px] h-auto rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-xl flex flex-col shrink-0 snap-start transition-transform duration-300 hover:-translate-y-1.5 group"
+                href="/services/air-diving"
+                className="w-[250px] sm:w-[270px] lg:w-[280px] xl:w-[290px] h-auto rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-xl flex flex-col shrink-0 snap-start transition-transform duration-300 hover:-translate-y-1.5 group cursor-pointer block"
               >
                 {/* Card Top Image */}
                 <div className="relative h-[210px] sm:h-[225px] lg:h-[235px] w-full overflow-hidden bg-slate-900 rounded-t-[20px] sm:rounded-t-[24px] shrink-0">
@@ -134,15 +135,12 @@ export default function ServicesSection() {
                   </div>
 
                   <div className="pt-2">
-                    <Link
-                      href={service.title === "Air Diving" ? "/services/air-diving" : "/#contact"}
-                      className="inline-block font-dm-sans font-bold text-xs sm:text-sm text-[#0055ff] hover:text-[#0038b8] transition-colors"
-                    >
+                    <span className="inline-block font-dm-sans font-bold text-xs sm:text-sm text-[#0055ff] group-hover:text-[#0038b8] transition-colors">
                       Read More
-                    </Link>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

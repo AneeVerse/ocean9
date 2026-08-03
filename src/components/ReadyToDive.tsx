@@ -4,22 +4,12 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function ReadyToDive() {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 min-h-[380px] lg:min-h-[420px] overflow-hidden bg-[#002365] text-center flex items-center justify-center">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/assets/home-ready-to-dive.png"
-          alt="Underwater Marine Operations Background"
-          fill
-          className="object-cover object-[center_32%]"
-          priority
-        />
-      </div>
+    <section className="relative py-16 sm:py-20 lg:py-24 min-h-[380px] lg:min-h-[420px] overflow-hidden bg-transparent text-center flex items-center justify-center">
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         {/* Section Subtitle Tag */}
         <div>
-          <span className="font-poppins font-bold text-xs sm:text-sm tracking-[0.2em] text-[#20c9d2] uppercase drop-shadow-[0_2px_8px_rgba(32,201,210,0.3)]">
+          <span className="font-poppins font-bold text-xs sm:text-sm lg:text-[15px] tracking-[0.2em] text-white uppercase drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
             Planning an Underwater or Marine Project?
           </span>
         </div>

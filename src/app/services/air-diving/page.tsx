@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import OceanBubbles from "@/components/OceanBubbles";
 import {
   ShieldCheck,
   CheckCircle2,
@@ -202,7 +203,7 @@ export default function AirDivingPage() {
       <Navbar />
 
       {/* SECTION 1: HERO SECTION - SINGLE FOLD (100VH) */}
-      <section className="relative h-screen min-h-[650px] w-full flex flex-col justify-center overflow-hidden bg-[#031027]">
+      <section id="hero" className="relative h-screen min-h-[650px] w-full flex flex-col justify-center overflow-hidden bg-[#031027]">
         {/* Background Image - NO OVERLAY AS REQUESTED */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -296,6 +297,8 @@ export default function AirDivingPage() {
           </div>
         </div>
       </section>
+
+      <OceanBubbles startAfterHero={true} />
 
       {/* SECTION 2: WHAT IS AIR DIVING? */}
       <section className="py-16 sm:py-20 lg:py-24 bg-[#f5f8fc] relative overflow-hidden text-slate-900">

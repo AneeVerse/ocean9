@@ -23,7 +23,9 @@ import CareersSection from "@/components/CareersSection";
 import ContactSection from "@/components/ContactSection";
 import ReadyToDive from "@/components/ReadyToDive";
 import Footer from "@/components/Footer";
+import SwimmingFishStrip from "@/components/SwimmingFishStrip";
 import UnderConstruction from "@/components/UnderConstruction";
+import OceanBubbles from "@/components/OceanBubbles";
 
 // Set to true to show Under Construction page by default, or false to show full website
 const SHOW_UNDER_CONSTRUCTION_BY_DEFAULT = true;
@@ -38,7 +40,7 @@ function HomeContent() {
   }
 
   return (
-    <main className="min-h-screen bg-[#002365] text-[#081935] flex flex-col font-sans">
+    <main className="relative min-h-screen bg-[#002365] text-[#081935] flex flex-col font-sans">
       <Navbar />
       <Hero />
 
@@ -51,6 +53,7 @@ function HomeContent() {
           className="object-cover object-[center_top] pointer-events-none opacity-90"
           priority
         />
+        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={120} topOffset={205} />
         <div className="relative z-10">
           <ClientStrip />
           <AboutSection />
@@ -71,6 +74,7 @@ function HomeContent() {
           className="object-cover object-top pointer-events-none opacity-90"
           priority
         />
+        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={120} />
         <div className="relative z-10">
           <ProjectExperience />
           <WorkHistory />
@@ -91,6 +95,7 @@ function HomeContent() {
           className="object-cover object-[center_top] pointer-events-none opacity-90"
           priority
         />
+        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={110} />
         <div className="relative z-10">
           <ProjectGallerySection />
           <VideoGallerySection />
@@ -99,6 +104,7 @@ function HomeContent() {
 
       <ContactSection />
       <CareersSection />
+
       {/* Single Continuous Ocean Background for Ready to Dive & Footer */}
       <div className="relative bg-[#00173e] overflow-hidden">
         <Image
@@ -108,8 +114,10 @@ function HomeContent() {
           className="object-cover object-center"
           priority
         />
+        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={90} />
         <div className="relative z-10">
           <ReadyToDive />
+          <SwimmingFishStrip />
           <Footer />
         </div>
       </div>

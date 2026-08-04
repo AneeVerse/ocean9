@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[650px] w-full flex flex-col justify-between bg-[#020917] overflow-hidden">
+    <section id="hero" className="relative h-screen min-h-[650px] w-full flex flex-col justify-between bg-[#020917] overflow-hidden">
       {/* Crisp Full Viewport Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

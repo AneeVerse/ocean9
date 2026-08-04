@@ -38,7 +38,7 @@ export default function ClientStrip() {
   const trackClients = [...clients, ...clients, ...clients];
 
   return (
-    <div className="relative bg-transparent z-20 overflow-hidden">
+    <div className="relative bg-transparent z-20 overflow-hidden [contain:layout_paint] [transform:translateZ(0)]">
       {/* Top Wave: Sweeping Curve */}
       <div className="w-full overflow-hidden leading-none bg-[#020917] -mb-px">
         <svg
@@ -68,7 +68,7 @@ export default function ClientStrip() {
                 <img
                   src={client.src}
                   alt={client.alt}
-                  className={`${client.heightClass} w-auto object-contain transition-transform duration-300`}
+                  className={`${client.heightClass} w-auto object-contain`}
                 />
               </div>
             ))}
@@ -87,7 +87,7 @@ export default function ClientStrip() {
                 <img
                   src={client.src}
                   alt={client.alt}
-                  className={`${client.heightClass} w-auto object-contain transition-transform duration-300`}
+                  className={`${client.heightClass} w-auto object-contain`}
                 />
               </div>
             ))}

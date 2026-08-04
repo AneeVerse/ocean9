@@ -45,6 +45,8 @@ body {
   width: max-content;
   animation: marquee 35s linear infinite;
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Hide scrollbar utility */
@@ -54,4 +56,89 @@ body {
 .scrollbar-none {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Synchronized Infinite Loop Swimming Fish */
+@keyframes swim-right {
+  0% {
+    transform: translate3d(-220px, 0, 0);
+  }
+  50% {
+    transform: translate3d(calc(50vw - 100px), -8px, 0);
+  }
+  100% {
+    transform: translate3d(100vw, 0, 0);
+  }
+}
+
+@keyframes swim-left {
+  0% {
+    transform: translate3d(100vw, 0, 0);
+  }
+  50% {
+    transform: translate3d(calc(50vw - 100px), 8px, 0);
+  }
+  100% {
+    transform: translate3d(-220px, 0, 0);
+  }
+}
+
+@keyframes fin-wobble {
+  0%, 100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(3deg) scaleY(0.94);
+  }
+}
+
+.animate-swim-right {
+  animation: swim-right 16s linear infinite;
+  will-change: transform;
+}
+
+.animate-swim-left {
+  animation: swim-left 16s linear infinite;
+  will-change: transform;
+}
+
+.animate-fin-wobble {
+  animation: fin-wobble 1.2s ease-in-out infinite;
+}
+
+.animate-fin-wobble-reverse {
+  animation: fin-wobble 1.5s ease-in-out infinite reverse;
+}
+
+/* Continuous Infinite Swimming Fish Tracks (Like Nisha Roadways) */
+@keyframes swim-track-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes swim-track-left {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-swim-track-right {
+  display: flex;
+  width: max-content;
+  animation: swim-track-right 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-swim-track-left {
+  display: flex;
+  width: max-content;
+  animation: swim-track-left 34s linear infinite;
+  will-change: transform;
 }

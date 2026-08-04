@@ -129,7 +129,7 @@ export default function CapabilitiesSection() {
             return (
               <div
                 key={item.id}
-                className="group relative bg-white border border-[#85baf3] rounded-[22px] p-7 text-left flex flex-col justify-between shadow-[0_4px_20px_rgba(0,35,101,0.05)] hover:shadow-[0_16px_40px_rgba(0,61,130,0.16)] hover:border-[#003D82] hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer min-h-[225px]"
+                className="group relative bg-white border border-[#85baf3] rounded-[22px] p-7 text-left flex flex-col justify-between shadow-[0_4px_20px_rgba(0,35,101,0.05)] hover:shadow-[0_16px_40px_rgba(0,61,130,0.16)] hover:border-[#003D82] hover:-translate-y-1.5 transition-all duration-300 ease-out min-h-[195px]"
               >
                 {/* Card Header: Number + Blue Bar on Left, Circular Light-Blue Icon Container on Right */}
                 <div className="flex items-start justify-between gap-3">
@@ -148,15 +148,10 @@ export default function CapabilitiesSection() {
                 </div>
 
                 {/* Capability Title */}
-                <div className="my-6">
+                <div className="mt-5">
                   <h3 className="font-poppins font-bold text-lg sm:text-[19px] text-[#002365] leading-[1.3] group-hover:text-[#003D82] transition-colors">
                     {item.title}
                   </h3>
-                </div>
-
-                {/* Bottom Left Blue Arrow */}
-                <div className="mt-auto pt-1">
-                  <ArrowRight className="w-5 h-5 text-[#003D82] group-hover:text-[#002365] group-hover:translate-x-1.5 transition-all duration-300" />
                 </div>
               </div>
             );

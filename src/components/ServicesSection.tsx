@@ -7,7 +7,7 @@ export default function ServicesSection() {
     {
       title: "Air Diving",
       description:
-        "We provide air diving services for inspection, repair, cleaning, maintenance and underwater construction work.",
+        "Safe and reliable diving support for inspection, repair, maintenance and construction work.",
       image: "/assets/home-air-diving-card.png",
     },
     {

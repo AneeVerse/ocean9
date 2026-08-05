@@ -1,22 +1,27 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
     <section id="hero" className="relative h-screen min-h-[650px] w-full flex flex-col justify-between bg-[#020917] overflow-hidden">
-      {/* Crisp Full Viewport Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/assets/home-hero-bg2.png"
-          alt="Ocean 9 Offshore Diver & Marine Operations"
-          fill
-          priority
-          className="object-cover object-center lg:object-right"
-        />
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0 overflow-hidden transform-gpu [transform:translateZ(0)]">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="w-full h-full object-cover object-center transform-gpu"
+        >
+          <source src="/assets/hero-bg-videoplayback.mp4" type="video/mp4" />
+        </video>
 
-        {/* Balanced bottom gradient overlay */}
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#020917]/90 via-[#020917]/50 to-transparent z-0 pointer-events-none" />
+        {/* Subtle dark overlay for text contrast */}
+        <div className="absolute inset-0 bg-[#020917]/40 pointer-events-none" />
+
+        {/* Seamless bottom gradient overlay to preserve bottom curve transition */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#020917] via-[#020917]/70 to-transparent pointer-events-none" />
       </div>
 
       {/* Main Hero Content - Vertically centered inside 100vh single fold */}

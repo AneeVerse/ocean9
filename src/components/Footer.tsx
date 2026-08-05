@@ -14,14 +14,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-white/15">
           {/* Brand Info & Contact Details */}
           <div className="lg:col-span-4 space-y-5">
-            <div className="relative w-[320px] sm:w-[400px] h-[100px] sm:h-[120px] -ml-1">
-              <Image
-                src="/assets/ocean9-logo2.png"
-                alt="Ocean 9 Logo"
-                fill
-                className="object-contain object-left scale-110 origin-left drop-shadow-md"
-              />
-            </div>
+            <Link href="/" className="inline-flex items-center gap-1 sm:gap-1.5 group mb-2">
+              <div className="relative w-10 sm:w-14 h-10 sm:h-14 shrink-0">
+                <Image
+                  src="/assets/ocean9-logo.png"
+                  alt="Ocean 9 Logo"
+                  fill
+                  className="object-contain drop-shadow-md"
+                />
+              </div>
+              <span className="font-bold text-3xl sm:text-4xl lg:text-[42px] tracking-tight leading-none drop-shadow-md select-none flex items-center">
+                <span className="text-[#0055d4]">Ocean</span>
+                <span className="text-[#e30613]">9</span>
+              </span>
+            </Link>
 
             <p className="text-white/90 text-sm sm:text-[15px] leading-relaxed max-w-sm drop-shadow-md font-medium">
               Ocean 9 Offshore Services Pvt. Ltd. provides underwater diving, marine and subsea engineering services for offshore and onshore projects.

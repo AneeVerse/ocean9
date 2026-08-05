@@ -36,7 +36,7 @@ interface OceanBubblesProps {
 
 export default function OceanBubbles({
   className = "pointer-events-none absolute inset-0 z-0",
-  bubbleCount = 120,
+  bubbleCount = 140,
   interactive = true,
   startAfterHero = false,
   topOffset = 0,
@@ -299,7 +299,24 @@ export default function OceanBubbles({
 
     let time = 0;
 
+    let isVisible = true;
+    const intersectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const wasVisible = isVisible;
+          isVisible = entry.isIntersecting;
+          if (!wasVisible && isVisible) {
+            cancelAnimationFrame(animationFrameId);
+            render();
+          }
+        });
+      },
+      { rootMargin: "200px 0px 200px 0px" }
+    );
+    intersectionObserver.observe(container);
+
     const render = () => {
+      if (!isVisible) return;
       time += 1;
       ctx.clearRect(0, 0, width, height);
 
@@ -512,6 +529,7 @@ export default function OceanBubbles({
 
     return () => {
       cancelAnimationFrame(animationFrameId);
+      intersectionObserver.disconnect();
       resizeObserver.disconnect();
       window.removeEventListener("resize", updateCanvasSize);
       if (startAfterHero) {

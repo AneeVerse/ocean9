@@ -10,7 +10,7 @@ export default function ClientStrip() {
     },
     {
       name: "Paramount Wires & Cables",
-      src: "/assets/home-paramount-logo.png",
+      src: "/assets/home-paramount-logo-removebg-preview.png",
       alt: "Paramount Wires & Cables Logo",
       heightClass: "h-9 sm:h-11 lg:h-13",
     },
@@ -50,47 +50,51 @@ export default function ClientStrip() {
         >
           <path
             d="M0 0 Q 720 76 1440 0 L 1440 101 L 0 101 Z"
-            fill="#FFFFFF"
+            fill="#e0f2fe"
           />
         </svg>
       </div>
 
-      {/* Main White Banner with Auto Infinite Marquee Scrolling */}
-      <section className="bg-white py-0.5 sm:py-1 overflow-hidden relative">
-        <div className="w-full flex overflow-hidden">
-          {/* Twin Track 1 */}
+      {/* Main Blue Banner with Auto Infinite Marquee Scrolling */}
+      <section className="bg-[#e0f2fe] py-0.5 sm:py-1 overflow-hidden relative isolate transform-gpu">
+        <div className="w-full flex overflow-hidden isolate">
+          {/* Unified 60fps Marquee Wrapper */}
           <div className="animate-marquee flex items-center shrink-0">
-            {trackClients.map((client, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center shrink-0 px-6 sm:px-8 lg:px-10"
-              >
-                <img
-                  src={client.src}
-                  alt={client.alt}
-                  className={`${client.heightClass} w-auto object-contain`}
-                />
-              </div>
-            ))}
-          </div>
+            {/* Track Set 1 */}
+            <div className="flex items-center shrink-0">
+              {trackClients.map((client, index) => (
+                <div
+                  key={`t1-${index}`}
+                  className="flex items-center justify-center shrink-0 px-6 sm:px-8 lg:px-10"
+                >
+                  <img
+                    src={client.src}
+                    alt={client.alt}
+                    decoding="async"
+                    loading="eager"
+                    className={`${client.heightClass} w-auto object-contain mix-blend-multiply`}
+                  />
+                </div>
+              ))}
+            </div>
 
-          {/* Twin Track 2 (Identical Duplicate for Seamless 60fps Loop) */}
-          <div
-            className="animate-marquee flex items-center shrink-0"
-            aria-hidden="true"
-          >
-            {trackClients.map((client, index) => (
-              <div
-                key={`dup-${index}`}
-                className="flex items-center justify-center shrink-0 px-6 sm:px-8 lg:px-10"
-              >
-                <img
-                  src={client.src}
-                  alt={client.alt}
-                  className={`${client.heightClass} w-auto object-contain`}
-                />
-              </div>
-            ))}
+            {/* Track Set 2 (Identical Duplicate for Seamless 60fps Loop) */}
+            <div className="flex items-center shrink-0" aria-hidden="true">
+              {trackClients.map((client, index) => (
+                <div
+                  key={`t2-${index}`}
+                  className="flex items-center justify-center shrink-0 px-6 sm:px-8 lg:px-10"
+                >
+                  <img
+                    src={client.src}
+                    alt={client.alt}
+                    decoding="async"
+                    loading="eager"
+                    className={`${client.heightClass} w-auto object-contain mix-blend-multiply`}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -106,7 +110,7 @@ export default function ClientStrip() {
         >
           <path
             d="M0 0 L 1440 0 L 1440 101 Q 720 25 0 101 Z"
-            fill="#FFFFFF"
+            fill="#e0f2fe"
           />
         </svg>
       </div>

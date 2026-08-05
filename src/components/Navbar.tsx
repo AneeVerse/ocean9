@@ -37,22 +37,32 @@ export default function Navbar() {
         }`}
       >
         {/* Ocean 9 Logo */}
-        <Link href="/" className="flex items-center group">
+        <Link href="/" className="flex items-center gap-1 sm:gap-1.5 group">
           <div
-            className={`relative flex items-center transition-all duration-500 ease-in-out ${
+            className={`relative transition-all duration-500 ease-in-out shrink-0 ${
               isScrolled
-                ? "w-[240px] sm:w-[270px] h-[56px] sm:h-[65px]"
-                : "w-[280px] sm:w-[350px] lg:w-[380px] h-[75px] sm:h-[90px]"
+                ? "w-8 sm:w-10 h-8 sm:h-10"
+                : "w-10 sm:w-12 lg:w-14 h-10 sm:h-12 lg:h-14"
             }`}
           >
             <Image
-              src="/assets/ocean9-logo2.png"
+              src="/assets/ocean9-logo.png"
               alt="Ocean 9 Logo"
               fill
-              className="object-contain object-left scale-120 sm:scale-135 origin-left"
+              className="object-contain"
               priority
             />
           </div>
+          <span
+            className={`font-bold tracking-tight leading-none transition-all duration-500 ease-in-out select-none flex items-center ${
+              isScrolled
+                ? "text-2xl sm:text-3xl"
+                : "text-3xl sm:text-4xl lg:text-[42px]"
+            }`}
+          >
+            <span className={isScrolled ? "text-[#003882]" : "text-[#0055d4]"}>Ocean</span>
+            <span className="text-[#e30613]">9</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation Links */}

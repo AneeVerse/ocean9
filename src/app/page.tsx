@@ -47,13 +47,13 @@ function HomeContent() {
       {/* Single Continuous Background from ClientStrip / About Us to Services Provided */}
       <div className="relative bg-[#002365] overflow-hidden">
         <Image
-          src="/assets/home-about-us-to-service-bg.png"
+          src="/images/home-from-about-to-sercive3.png"
           alt="Ocean 9 Background"
           fill
-          className="object-cover object-[center_top] pointer-events-none opacity-90"
+          className="object-cover object-[center_18%] pointer-events-none opacity-90"
           priority
         />
-        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={120} topOffset={205} />
+        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={150} topOffset={205} />
         <div className="relative z-10">
           <ClientStrip />
           <AboutSection />
@@ -68,13 +68,13 @@ function HomeContent() {
       {/* Single Continuous Background from Project Experience to FAQs */}
       <div className="relative bg-[#002365] overflow-hidden">
         <Image
-          src="/assets/home-our-project-to-faq-bg4.png"
+          src="/images/home-about-us-to-service2.png"
           alt="Ocean 9 Projects to FAQ Background"
           fill
-          className="object-cover object-top pointer-events-none opacity-90"
+          className="object-cover object-[center_top] pointer-events-none opacity-90"
           priority
         />
-        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={120} />
+        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={150} />
         <div className="relative z-10">
           <ProjectExperience />
           <WorkHistory />
@@ -89,13 +89,13 @@ function HomeContent() {
       {/* Single Continuous Ocean Background for Project Gallery & Video Gallery */}
       <div className="relative bg-[#002365] overflow-hidden">
         <Image
-          src="/assets/home-about-us-to-service-bg.png"
+          src="/images/home-from-about-to-sercive3.png"
           alt="Ocean 9 Media Background"
           fill
           className="object-cover object-[center_top] pointer-events-none opacity-90"
           priority
         />
-        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={110} />
+        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={140} />
         <div className="relative z-10">
           <ProjectGallerySection />
           <VideoGallerySection />
@@ -114,7 +114,7 @@ function HomeContent() {
           className="object-cover object-center"
           priority
         />
-        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={90} />
+        <OceanBubbles className="pointer-events-none absolute inset-0 z-0 opacity-75" bubbleCount={130} />
         <div className="relative z-10">
           <ReadyToDive />
           <SwimmingFishStrip />

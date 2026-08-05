@@ -6,8 +6,8 @@ import Image from "next/image";
 export default function SwimmingFishStrip() {
   return (
     <div className="w-full relative min-h-[200px] sm:min-h-[250px] flex items-center justify-center my-4 z-20 pointer-events-none select-none">
-      {/* Center Dashed Ocean Current Line */}
-      <div className="w-full border-b-2 border-dashed border-cyan-400/40 relative z-0" />
+      {/* Center Dashed Ocean Current Line - Commented out for cleaner look */}
+      {/* <div className="w-full border-b-2 border-dashed border-cyan-400/40 relative z-0" /> */}
 
       {/* UPPER SWIM LANE: Single Fish 1 Swimming Left to Right (Sweet spot above line) */}
       <div className="absolute top-1/2 -translate-y-[82%] w-full left-0 pointer-events-none z-10">

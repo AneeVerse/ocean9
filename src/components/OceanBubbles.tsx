@@ -338,20 +338,30 @@ export default function OceanBubbles({
 
       if (fish1Elem) {
         const r = fish1Elem.getBoundingClientRect();
+        const w = r.width;
+        const h = r.height;
+        // Natural elliptical bounds fitting fish body & fins
+        const insetX = w * 0.12;
+        const insetY = h * 0.14;
         f1Box = {
-          left: r.left - containerRect.left,
-          right: r.right - containerRect.left,
-          top: r.top - containerRect.top,
-          bottom: r.bottom - containerRect.top,
+          left: r.left + insetX - containerRect.left,
+          right: r.right - insetX - containerRect.left,
+          top: r.top + insetY - containerRect.top,
+          bottom: r.bottom - insetY - containerRect.top,
         };
       }
       if (fish2Elem) {
         const r = fish2Elem.getBoundingClientRect();
+        const w = r.width;
+        const h = r.height;
+        // Natural elliptical bounds fitting fish body & fins
+        const insetX = w * 0.12;
+        const insetY = h * 0.14;
         f2Box = {
-          left: r.left - containerRect.left,
-          right: r.right - containerRect.left,
-          top: r.top - containerRect.top,
-          bottom: r.bottom - containerRect.top,
+          left: r.left + insetX - containerRect.left,
+          right: r.right - insetX - containerRect.left,
+          top: r.top + insetY - containerRect.top,
+          bottom: r.bottom - insetY - containerRect.top,
         };
       }
 
@@ -370,29 +380,55 @@ export default function OceanBubbles({
         const wobble = Math.sin(time * b.wobbleSpeed + b.wobblePhase) * b.wobbleAmp;
         let currentX = b.baseX + wobble;
 
-        // Check Fish 1 collision (Instant burst if ANY part of fish touches bubble)
-        if (f1Box) {
-          const closestX = Math.max(f1Box.left, Math.min(currentX, f1Box.right));
-          const closestY = Math.max(f1Box.top, Math.min(b.y, f1Box.bottom));
-          const dist = Math.hypot(currentX - closestX, b.y - closestY);
+        // Check Fish 1 collision (Smooth elliptical fish surface contact)
+        if (f1Box && f1Box.right > f1Box.left && f1Box.bottom > f1Box.top) {
+          const cx = (f1Box.left + f1Box.right) / 2;
+          const cy = (f1Box.top + f1Box.bottom) / 2;
+          const rx = (f1Box.right - f1Box.left) / 2;
+          const ry = (f1Box.bottom - f1Box.top) / 2;
 
-          if (dist <= b.radius + 10) {
-            triggerBurst(currentX, b.y, b.radius, b.opacity);
-            bubbles[i] = createBubble(false);
-            continue;
+          // Normalized elliptical distance from bubble center to fish center
+          const normDist = Math.hypot((currentX - cx) / rx, (b.y - cy) / ry);
+
+          // Burst when bubble edge touches smooth elliptical fish outline
+          if (normDist <= 1.0 + (b.radius / ry) * 0.5) {
+            // Main body bubbles burst on fish surface; background bubbles pass behind
+            if (b.layer > 0 && Math.random() < 0.75) {
+              triggerBurst(currentX, b.y, b.radius, b.opacity);
+              const newB = createBubble(false);
+              // 40% chance spawn recycled bubble above fish to keep continuous upward bubble flow
+              if (Math.random() < 0.4) {
+                newB.y = Math.max(10, f1Box.top - 15 - Math.random() * 30);
+              }
+              bubbles[i] = newB;
+              continue;
+            }
           }
         }
 
-        // Check Fish 2 collision (Instant burst if ANY part of fish touches bubble)
-        if (f2Box) {
-          const closestX = Math.max(f2Box.left, Math.min(currentX, f2Box.right));
-          const closestY = Math.max(f2Box.top, Math.min(b.y, f2Box.bottom));
-          const dist = Math.hypot(currentX - closestX, b.y - closestY);
+        // Check Fish 2 collision (Smooth elliptical fish surface contact)
+        if (f2Box && f2Box.right > f2Box.left && f2Box.bottom > f2Box.top) {
+          const cx = (f2Box.left + f2Box.right) / 2;
+          const cy = (f2Box.top + f2Box.bottom) / 2;
+          const rx = (f2Box.right - f2Box.left) / 2;
+          const ry = (f2Box.bottom - f2Box.top) / 2;
 
-          if (dist <= b.radius + 10) {
-            triggerBurst(currentX, b.y, b.radius, b.opacity);
-            bubbles[i] = createBubble(false);
-            continue;
+          // Normalized elliptical distance from bubble center to fish center
+          const normDist = Math.hypot((currentX - cx) / rx, (b.y - cy) / ry);
+
+          // Burst when bubble edge touches smooth elliptical fish outline
+          if (normDist <= 1.0 + (b.radius / ry) * 0.5) {
+            // Main body bubbles burst on fish surface; background bubbles pass behind
+            if (b.layer > 0 && Math.random() < 0.75) {
+              triggerBurst(currentX, b.y, b.radius, b.opacity);
+              const newB = createBubble(false);
+              // 40% chance spawn recycled bubble above fish to keep continuous upward bubble flow
+              if (Math.random() < 0.4) {
+                newB.y = Math.max(10, f2Box.top - 15 - Math.random() * 30);
+              }
+              bubbles[i] = newB;
+              continue;
+            }
           }
         }
 

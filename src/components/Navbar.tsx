@@ -60,7 +60,7 @@ export default function Navbar() {
                 : "text-3xl sm:text-4xl lg:text-[42px]"
             }`}
           >
-            <span className={isScrolled ? "text-[#003882]" : "text-[#0055d4]"}>Ocean</span>
+            <span className="text-[#003882]">Ocean</span>
             <span className="text-[#e30613]">9</span>
           </span>
         </Link>

@@ -24,7 +24,7 @@ export default function Footer() {
                 />
               </div>
               <span className="font-bold text-3xl sm:text-4xl lg:text-[42px] tracking-tight leading-none drop-shadow-md select-none flex items-center">
-                <span className="text-[#0055d4]">Ocean</span>
+                <span className="text-[#003882]">Ocean</span>
                 <span className="text-[#e30613]">9</span>
               </span>
             </Link>

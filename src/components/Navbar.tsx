@@ -11,7 +11,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 250) {
+      if (window.scrollY > 40) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -25,14 +25,26 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md py-2 sm:py-2.5 shadow-md"
-          : "bg-gradient-to-b from-[#020917]/80 via-[#020917]/40 to-transparent py-4 sm:py-5"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
+        isScrolled ? "py-2 sm:py-2.5 shadow-md" : "py-4 sm:py-5"
       }`}
     >
+      {/* Dark Transparent Gradient Background Layer */}
       <div
-        className={`max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-all duration-500 ease-in-out ${
+        className={`absolute inset-0 bg-gradient-to-b from-[#020917]/85 via-[#020917]/45 to-transparent transition-opacity duration-500 ease-in-out pointer-events-none ${
+          isScrolled ? "opacity-0" : "opacity-100"
+        }`}
+      />
+
+      {/* Solid White Blurred Background Layer */}
+      <div
+        className={`absolute inset-0 bg-white/95 backdrop-blur-md transition-opacity duration-500 ease-in-out pointer-events-none ${
+          isScrolled ? "opacity-100" : "opacity-0"
+        }`}
+      />
+
+      <div
+        className={`relative z-10 max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-all duration-500 ease-in-out ${
           isScrolled ? "h-14 sm:h-16" : "h-16 sm:h-20"
         }`}
       >
@@ -60,8 +72,8 @@ export default function Navbar() {
                 : "text-3xl sm:text-4xl lg:text-[42px]"
             }`}
           >
-            <span className="text-[#003882]">Ocean</span>
-            <span className="text-[#e30613]">9</span>
+            <span className="text-[#034d8c]">Ocean</span>
+            <span className="text-[#ba1319]">9</span>
           </span>
         </Link>
 
@@ -69,7 +81,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-[34px]">
           <Link
             href="/"
-            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors duration-500 ${
               isScrolled
                 ? "text-[#002365] hover:text-[#0055ff]"
                 : "text-white hover:text-cyan-400"
@@ -79,7 +91,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/#about"
-            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors duration-500 ${
               isScrolled
                 ? "text-[#002365]/90 hover:text-[#0055ff]"
                 : "text-slate-200 hover:text-cyan-400"
@@ -89,7 +101,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/#services"
-            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors duration-500 ${
               isScrolled
                 ? "text-[#002365]/90 hover:text-[#0055ff]"
                 : "text-slate-200 hover:text-cyan-400"
@@ -99,7 +111,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/#projects"
-            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors duration-500 ${
               isScrolled
                 ? "text-[#002365]/90 hover:text-[#0055ff]"
                 : "text-slate-200 hover:text-cyan-400"
@@ -109,7 +121,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/#blog"
-            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors duration-500 ${
               isScrolled
                 ? "text-[#002365]/90 hover:text-[#0055ff]"
                 : "text-slate-200 hover:text-cyan-400"
@@ -119,7 +131,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/#faq"
-            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors ${
+            className={`font-semibold text-[16px] leading-[22px] tracking-normal transition-colors duration-500 ${
               isScrolled
                 ? "text-[#002365]/90 hover:text-[#0055ff]"
                 : "text-slate-200 hover:text-cyan-400"
